@@ -1,0 +1,7 @@
+image: {
+	[bootloader]/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/fsbl/Release/fsbl.elf
+	/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.bit
+	u-boot.elf
+	[load=0x2a00000]devicetree.dtb
+	[load=0x3000000]uImage.bin
+}

@@ -1,0 +1,22 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/processing_system7_0.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/processing_system7_0.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/processing_system7_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_adc_1c_0.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_adc_1c_0.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/axi_adc_1c_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_interconnect_1.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_interconnect_1.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/axi_interconnect_1.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_dma_0.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_dma_0.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/axi_dma_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_interconnect_2.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_interconnect_2.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/axi_interconnect_2.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_spi_0.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/axi_spi_0.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/axi_spi_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/util_spi_3w_0.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/util_spi_3w_0.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/util_spi_3w_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/init_dma_0.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/init_dma_0.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/init_dma_0.svg"/>
+
+  <RENDERIMG RASNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/system_blkd.jpg" SVGNAME="/home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/imgs/system_blkd.svg" TMPSVGFN="/home/vladimir/cf_ad9467_zed/__xps/.dswkshop/system_blkd.svg"/>
+
+</RENDERBATCH>

@@ -1,0 +1,10 @@
+-batch 
+-create init_dma 
+-ver 1.00.b 
+-dir "/home/vladimir/cf_ad9467_zed" 
+-lang verilog 
+-bus axi4lite s 
+-reg 32 
+-xps 
+-ise 
+-driver 

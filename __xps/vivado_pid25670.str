@@ -1,0 +1,504 @@
+/*
+
+Vivado v2013.3 (64-bit)
+SW Build 329390 on Wed Oct 16 18:26:55 MDT 2013
+Process ID: 25670
+
+Current time: 	7/30/14 2:11:39 PM
+Time zone: 	Moscow Standard Time (Europe/Moscow)
+
+OS: DISTRIB_ID=Ubuntu
+Version: 3.8.0-38-generic
+Architecture: amd64
+Available processors (cores): 4
+
+DISPLAY: :0
+Screen size: 3840x1200
+Screen resolution (DPI): 96
+Available screens: 2
+
+Java version: 	1.7.0_17 64-bit
+Java home: 	/opt/Xilinx/Vivado/2013.3/tps/lnx64/jre
+
+User name: 	root
+User directory: /home/vladimir/cf_ad9467_zed/__xps
+User country: 	RU
+User language: 	ru
+User locale: 	ru_RU
+
+GUI Allocated memory:	122 mb
+GUI Max memory:		3,066 mb
+Engine Allocated memory: 3704 mb
+
+*/
+
+// TclEventType: START_GUI
+minimizeFrame (PAResourceItoP.PAViews_TCL_CONSOLE, "Tcl Console"); // af:DockableFrame (FrameContainer:JideTabbedPane, bR:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ac:JideMenu (CommandMenuBar:CommandBar, bR:JFrame)
+// o:I (bR:JFrame): XilinxNotify - Available Updates: addNotify
+dismissMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ac:JideMenu (CommandMenuBar:CommandBar, bR:JFrame)
+selectButton (RDIResource.UpdateDialog_CLOSE, "Close"); // a:JButton (JPanel:JComponent, o:I)
+dismissDialog ("XilinxNotify - Available Updates"); // o:I (bR:JFrame)
+selectMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ac:JideMenu (CommandMenuBar:CommandBar, bR:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 2:11:40 PM
+selectMenuItem (PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open Project..."); // ai:JMenuItem (JPopupMenu:JComponent, bR:JFrame)
+dismissMenu (PAResourceItoP.MainMenuMgr_FILE, "File"); // ac:JideMenu (CommandMenuBar:CommandBar, bR:JFrame)
+// Elapsed time: 10 seconds
+setFileChooser ("/home/vladimir/stas/final_dma/testDMA.xpr");
+// ca:I (bR:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 47 mb (+46725kb) [00:00:20]
+// [Engine Memory]: 3,727 mb (+3756403kb) [00:00:20]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 50 mb (+2924kb) [00:00:24]
+// [Engine Memory]: 3,804 mb (+80474kb) [00:00:24]
+// [GUI Memory]: 91 mb (+42936kb) [00:00:25]
+// [Engine Memory]: 3,898 mb (+98889kb) [00:00:25]
+// [GUI Memory]: 104 mb (+14505kb) [00:00:25]
+// [GUI Memory]: 114 mb (+9919kb) [00:00:25]
+// [Engine Memory]: 3,900 mb (+2097kb) [00:00:26]
+// [Engine Memory]: 3,904 mb (+4194kb) [00:00:26]
+// [Engine Memory]: 3,907 mb (+3047kb) [00:00:26]
+// [Engine Memory]: 3,910 mb (+3227kb) [00:00:26]
+// [Engine Memory]: 3,925 mb (+15548kb) [00:00:27]
+// [Engine Memory]: 3,930 mb (+5611kb) [00:00:28]
+// Tcl Message: open_project /home/vladimir/stas/final_dma/testDMA.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/chupa/WORK/testDMA3work' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// [Engine Memory]: 3,934 mb (+4194kb) [00:00:29]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 2:12:02 PM
+// [Engine Memory]: 3,940 mb (+6299kb) [00:00:29]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 4606.223 ; gain = 219.219 
+// 'f' command handler elapsed time: 22 seconds
+// Elapsed time: 12 seconds
+dismissDialog ("Open Project"); // ca:I (bR:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 3,942 mb (+2310kb) [00:00:33]
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 3,945 mb (+3194kb) [00:00:34]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 3,960 mb (+14934kb) [00:00:34]
+// [Engine Memory]: 3,963 mb (+3350kb) [00:00:34]
+// [GUI Memory]: 119 mb (+5480kb) [00:00:34]
+// [Engine Memory]: 3,964 mb (+1048kb) [00:00:34]
+// [Engine Memory]: 3,968 mb (+4235kb) [00:00:34]
+// [Engine Memory]: 3,974 mb (+6922kb) [00:00:34]
+// [Engine Memory]: 3,981 mb (+7225kb) [00:00:34]
+// [GUI Memory]: 132 mb (+12979kb) [00:00:35]
+// [Engine Memory]: 3,987 mb (+6291kb) [00:00:35]
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 3,989 mb (+2121kb) [00:00:37]
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 41 seconds
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testDMA_wrapper (testDMA_wrapper.v)]", 1); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testDMA_wrapper (testDMA_wrapper.v), testDMA_i - testDMA (testDMA.bd)]", 2); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testDMA_wrapper (testDMA_wrapper.v), testDMA_i - testDMA (testDMA.bd)]", 2); // n:f (u:JPanel, bR:JFrame)
+// [GUI Memory]: 132 mb (+774kb) [00:01:14]
+// [GUI Memory]: 134 mb (+2027kb) [00:01:14]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, testDMA_wrapper (testDMA_wrapper.v), testDMA_i - testDMA (testDMA.bd), testDMA_auto_ds_2084 (testDMA_auto_ds_2084.xci)]", 4, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// ca:I (bR:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// [Engine Memory]: 3,989 mb (+12kb) [00:01:16]
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/vladimir/stas/final_dma/testDMA.srcs/sources_1/bd/testDMA/testDMA.bd} 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.3 - processing_system7_0 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PARAM_UPDATED
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 2:12:50 PM
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PARAM_UPDATED
+// [Engine Memory]: 4,012 mb (+24117kb) [00:01:20]
+// TclEventType: PARAM_UPDATED
+// Tcl Message: INFO: [xilinx.com:ip:ila:3.0-345] testDMA_ila_0_1: Test 11 
+// TclEventType: PARAM_UPDATED
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PARAM_UPDATED
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: PARAM_UPDATED
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 4,012 mb (+12kb) [00:01:30]
+// [GUI Memory]: 138 mb (+3567kb) [00:01:31]
+// [Engine Memory]: 4,015 mb (+2834kb) [00:01:31]
+// [Engine Memory]: 4,029 mb (+14245kb) [00:01:31]
+// [Engine Memory]: 4,035 mb (+6660kb) [00:01:31]
+// [Engine Memory]: 4,037 mb (+1687kb) [00:01:31]
+// [GUI Memory]: 141 mb (+3810kb) [00:01:31]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: Successfully read diagram <testDMA> from BD file </home/vladimir/stas/final_dma/testDMA.srcs/sources_1/bd/testDMA/testDMA.bd> 
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 4,040 mb (+3149kb) [00:01:32]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 143 mb (+2157kb) [00:01:33]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 4728.023 ; gain = 62.547 
+// Elapsed time: 18 seconds
+dismissDialog ("Open Block Design"); // ca:I (bR:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 4,044 mb (+4374kb) [00:01:34]
+// [Engine Memory]: 4,048 mb (+4636kb) [00:01:34]
+// [Engine Memory]: 4,049 mb (+1048kb) [00:01:34]
+// [Engine Memory]: 4,054 mb (+4825kb) [00:01:34]
+// [Engine Memory]: 4,060 mb (+6234kb) [00:01:34]
+// [Engine Memory]: 4,061 mb (+1761kb) [00:01:34]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 2:13:10 PM
+selectView (PAResourceItoP.PAViews_SYSTEM, "System", 531, 290, 1033, 574, false, false, false, true, false); // cb:aA (TdiGroup:JideTabbedPane, bR:JFrame) - POPUP TRIGGER
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// [Engine Memory]: 4,064 mb (+3149kb) [00:01:38]
+selectMenuItem (PAResourceQtoZ.SystemBuilderMenu_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// i:X (bR:JFrame): Edit in IP Packager: addNotify
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, i:X)
+// ca:I (bR:JFrame):  Edit in IP Packager : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// [Engine Memory]: 4,067 mb (+3145kb) [00:01:40]
+// [Engine Memory]: 4,073 mb (+6291kb) [00:01:40]
+// [Engine Memory]: 4,076 mb (+3145kb) [00:01:41]
+// TclEventType: FILE_SET_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name {edit_ip} -directory {/home/vladimir/stas/final_dma/IPCore/myip_6.0} {/home/vladimir/stas/final_dma/IPCore/myip_6.0/component.xml} 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 4,090 mb (+14688kb) [00:01:42]
+// [Engine Memory]: 4,099 mb (+9449kb) [00:01:42]
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/vladimir/Z/zedboard/final_dma/IPCore/myip_6.0' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_CURRENT_CORE
+// [Engine Memory]: 4,119 mb (+20652kb) [00:01:46]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/IPCore/reg_status_1.0'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/Z/zedboard/final_dma/IPCore/myip_6.0'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/IPCore/init_dma_5.0'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/IPCore'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/IPCore/Emul'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/IPCore/def_stream_1.0'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/IPCore/myip_6.0'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/ILA_1.0'. INFO: [IP_Flow 19-1700] Loaded user repository '/home/vladimir/stas/final_dma/myip_1.0'. 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 4810.484 ; gain = 57.758 
+// 'g' command handler elapsed time: 8 seconds
+dismissDialog ("Edit in IP Packager"); // ca:I (bR:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 4,135 mb (+16834kb) [00:01:50]
+// TclEventType: DG_UPDATE_GRAPH
+selectList (PAResourceItoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 9); // F:l (JViewport:JComponent, bR:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 144 mb (+348kb) [00:01:50]
+// [Engine Memory]: 4,139 mb (+4194kb) [00:01:50]
+// [GUI Memory]: 153 mb (+10082kb) [00:01:50]
+// [Engine Memory]: 4,141 mb (+2097kb) [00:01:50]
+// [Engine Memory]: 4,144 mb (+3145kb) [00:01:50]
+// [Engine Memory]: 4,146 mb (+2097kb) [00:01:50]
+// [Engine Memory]: 4,148 mb (+2097kb) [00:01:51]
+// [Engine Memory]: 4,150 mb (+2097kb) [00:01:51]
+// [Engine Memory]: 4,152 mb (+2097kb) [00:01:51]
+// [Engine Memory]: 4,153 mb (+1048kb) [00:01:52]
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 4,156 mb (+3149kb) [00:01:52]
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v)]", 1); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S00_AXI_inst - myip_v6_0_S00_AXI (myip_v6_0_S00_AXI.v)]", 2); // n:f (u:JPanel, bR:JFrame)
+// [Engine Memory]: 4,160 mb (+4407kb) [00:01:59]
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_M00_AXI_inst - myip_v6_0_M00_AXI (myip_v6_0_M00_AXI.v)]", 4); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_M00_AXI_inst - myip_v6_0_M00_AXI (myip_v6_0_M00_AXI.v)]", 4, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 2:13:32 PM
+// Elapsed time: 37 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 133, 459); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 133, 459, false, false, false, false, true); // aR:G (JPanel:JComponent, bR:JFrame) - DOUBLE CLICK
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 133, 459, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, Popup:JWindow)
+// Elapsed time: 67 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 472, 351); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 72, 352, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 189, 308); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 27, 288, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// Elapsed time: 20 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 87, 442); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 95, 284, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// Elapsed time: 107 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 290, 388); // aR:G (JPanel:JComponent, bR:JFrame)
+// [GUI Memory]: 158 mb (+4597kb) [00:24:02]
+// [GUI Memory]: 159 mb (+979kb) [00:26:32]
+// [GUI Memory]: 161 mb (+3009kb) [00:26:42]
+// [GUI Memory]: 164 mb (+3012kb) [00:26:52]
+// [GUI Memory]: 165 mb (+937kb) [00:29:25]
+// [GUI Memory]: 168 mb (+3066kb) [00:29:35]
+// [GUI Memory]: 170 mb (+2332kb) [00:29:45]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 2:41:32 PM
+// Elapsed time: 1684 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 409, 458); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 409, 458, false, false, false, false, true); // aR:G (JPanel:JComponent, bR:JFrame) - DOUBLE CLICK
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 409, 458, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, Popup:JWindow)
+// [GUI Memory]: 173 mb (+2747kb) [00:58:45]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 3:11:32 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 3:41:33 PM
+// [GUI Memory]: 176 mb (+3518kb) [01:57:30]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 4:11:33 PM
+// [GUI Memory]: 177 mb (+624kb) [02:25:25]
+// [GUI Memory]: 177 mb (+158kb) [02:27:55]
+// [GUI Memory]: 181 mb (+3733kb) [02:28:08]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 4:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 5:11:33 PM
+// Elapsed time: 9000 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 185, 218); // aR:G (JPanel:JComponent, bR:JFrame)
+// Elapsed time: 16 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 396, 246); // aR:G (JPanel:JComponent, bR:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 5:41:33 PM
+// [GUI Memory]: 183 mb (+2516kb) [03:58:53]
+// [GUI Memory]: 186 mb (+3068kb) [03:59:03]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 6:11:33 PM
+// [GUI Memory]: 188 mb (+2289kb) [04:28:18]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 6:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 7:11:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 7:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 8:11:33 PM
+// [GUI Memory]: 189 mb (+354kb) [06:28:05]
+// [GUI Memory]: 192 mb (+3736kb) [06:28:18]
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 8:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 9:11:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 9:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 10:11:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 10:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 11:11:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/30/14 11:41:33 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 12:11:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 12:41:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 1:11:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 1:41:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 2:11:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 2:41:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:11:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:41:33 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 4:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 4:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 5:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 5:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 6:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 6:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 7:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 7:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 8:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 8:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 9:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 9:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 10:11:34 AM
+// [GUI Memory]: 192 mb (+130kb) [20:26:46]
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 10:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 11:11:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 11:41:34 AM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 12:11:34 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 12:41:34 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 1:11:34 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 1:41:34 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 2:11:34 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 2:41:34 PM
+// Elapsed time: 78796 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 200, 123); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 200, 123, false, false, false, false, true); // aR:G (JPanel:JComponent, bR:JFrame) - DOUBLE CLICK
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 200, 123, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 245, 69); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 244, 70, false, false, false, false, true); // aR:G (JPanel:JComponent, bR:JFrame) - DOUBLE CLICK
+selectCodeEditor ("myip_v6_0_M00_AXI.v", 244, 70, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// Elapsed time: 48 seconds
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S01_AXI_inst - myip_v6_0_S01_AXI (myip_v6_0_S01_AXI.v)]", 3); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S01_AXI_inst - myip_v6_0_S01_AXI (myip_v6_0_S01_AXI.v)]", 3, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:10:29 PM
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S01_AXI_inst - myip_v6_0_S01_AXI (myip_v6_0_S01_AXI.v)]", 3); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S00_AXI_inst - myip_v6_0_S00_AXI (myip_v6_0_S00_AXI.v)]", 2); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S00_AXI_inst - myip_v6_0_S00_AXI (myip_v6_0_S00_AXI.v)]", 2, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:10:34 PM
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_M00_AXI_inst - myip_v6_0_M00_AXI (myip_v6_0_M00_AXI.v)]", 4); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_M00_AXI_inst - myip_v6_0_M00_AXI (myip_v6_0_M00_AXI.v)]", 4, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v)]", 1); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v)]", 1, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:10:43 PM
+// [Engine Memory]: 4,163 mb (+3149kb) [24:59:10]
+selectCodeEditor ("myip_v6_0.v", 219, 264); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("myip_v6_0.v", 219, 264, false, false, false, false, true); // aR:G (JPanel:JComponent, bR:JFrame) - DOUBLE CLICK
+selectCodeEditor ("myip_v6_0.v", 219, 264, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// Tcl Message: current_project testDMA 
+// Elapsed time: 27 seconds
+selectView (PAResourceItoP.PAViews_SYSTEM, "System", 738, 219, 1033, 574, false, false, false, true, false); // cb:aA (TdiGroup:JideTabbedPane, bR:JFrame) - POPUP TRIGGER
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectMenuItem (PAResourceQtoZ.SystemBuilderMenu_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// i:X (bR:JFrame): Edit in IP Packager: addNotify
+setText (PAResourceAtoH.EditInIPPackagerHandler_PROJECT_NAME, "edit_ip1"); // am:JTextField (JPanel:JComponent, i:X)
+selectButton (RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, i:X)
+// ca:I (bR:JFrame):  Edit in IP Packager : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name {edit_ip1} -directory {/home/vladimir/stas/final_dma/IPCore/def_stream_1.0} {/home/vladimir/stas/final_dma/IPCore/def_stream_1.0/component.xml} 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 4,166 mb (+3149kb) [24:59:50]
+// [Engine Memory]: 4,175 mb (+9449kb) [24:59:51]
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/vladimir/Z/zedboard/180414stream/newIPCore/def_stream_1.0' since last save. 
+// Tcl Message: IP Repository Path: Could not find the directory '/chupa/Pravka2/Final_DMA/IPCore/def_stream_1.0', nor could it be found using path '/home/chupa/Pravka2/Final_DMA/IPCore/def_stream_1.0'. Scanning sources... Finished scanning sources 
+// [Engine Memory]: 4,181 mb (+6299kb) [24:59:53]
+// TclEventType: PACKAGER_MESSAGE_RESET
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:11:27 PM
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_CURRENT_CORE
+// [Engine Memory]: 4,184 mb (+3149kb) [24:59:55]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 4875.777 ; gain = 21.027 
+// 'g' command handler elapsed time: 10 seconds
+dismissDialog ("Edit in IP Packager"); // ca:I (bR:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, def_stream_v1_0 (def_stream_v1_0.v)]", 1); // n:f (u:JPanel, bR:JFrame)
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:11:35 PM
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, def_stream_v1_0 (def_stream_v1_0.v), def_stream_v1_0_M00_AXIS_inst - def_stream_v1_0_M00_AXIS (def_stream_v1_0_M00_AXIS.v)]", 2); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, def_stream_v1_0 (def_stream_v1_0.v), def_stream_v1_0_M00_AXIS_inst - def_stream_v1_0_M00_AXIS (def_stream_v1_0_M00_AXIS.v)]", 2); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, def_stream_v1_0 (def_stream_v1_0.v), def_stream_v1_0_M00_AXIS_inst - def_stream_v1_0_M00_AXIS (def_stream_v1_0_M00_AXIS.v)]", 2, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:11:36 PM
+selectCodeEditor ("def_stream_v1_0_M00_AXIS.v", 166, 277); // aR:G (JPanel:JComponent, bR:JFrame)
+selectCodeEditor ("def_stream_v1_0_M00_AXIS.v", 166, 277, false, false, false, false, true); // aR:G (JPanel:JComponent, bR:JFrame) - DOUBLE CLICK
+selectCodeEditor ("def_stream_v1_0_M00_AXIS.v", 166, 277, false, false, false, true, false); // aR:G (JPanel:JComponent, bR:JFrame) - POPUP TRIGGER
+selectMenuItem (RDIResource.HCodeEditor_COPY, "Copy"); // ai:JMenuItem (am:JPopupMenu, bR:JFrame)
+// Tcl Message: current_project testDMA 
+// Elapsed time: 95 seconds
+selectCodeEditor ("myip_v6_0.v", 486, 132); // aR:G (JPanel:JComponent, bR:JFrame)
+// Elapsed time: 551 seconds
+expandTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v)]", 1); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S01_AXI_inst - myip_v6_0_S01_AXI (myip_v6_0_S01_AXI.v)]", 3); // n:f (u:JPanel, bR:JFrame)
+// Tcl Message: current_project edit_ip 
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_S01_AXI_inst - myip_v6_0_S01_AXI (myip_v6_0_S01_AXI.v)]", 3, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// Elapsed time: 53 seconds
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_M00_AXI_inst - myip_v6_0_M00_AXI (myip_v6_0_M00_AXI.v)]", 4); // n:f (u:JPanel, bR:JFrame)
+selectTree (PAResourceAtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v6_0 (myip_v6_0.v), myip_v6_0_M00_AXI_inst - myip_v6_0_M00_AXI (myip_v6_0_M00_AXI.v)]", 4, false, false, false, false, true); // n:f (u:JPanel, bR:JFrame) - DOUBLE CLICK
+// [GUI Memory]: 192 mb (+211kb) [25:21:42]
+// [GUI Memory]: 193 mb (+587kb) [25:23:30]
+// [GUI Memory]: 196 mb (+3370kb) [25:23:39]
+// [GUI Memory]: 197 mb (+930kb) [25:25:27]
+// [GUI Memory]: 200 mb (+3352kb) [25:25:35]
+// [GUI Memory]: 201 mb (+1040kb) [25:27:07]
+// [GUI Memory]: 204 mb (+2700kb) [25:27:16]
+// [GUI Memory]: 206 mb (+2683kb) [25:27:24]
+// [GUI Memory]: 208 mb (+1745kb) [25:27:32]
+// [GUI Memory]: 208 mb (+282kb) [25:30:02]
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 3:41:35 PM
+// [GUI Memory]: 209 mb (+862kb) [25:53:06]
+// [GUI Memory]: 212 mb (+3097kb) [25:53:14]
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 4:11:35 PM
+// [GUI Memory]: 212 mb (+232kb) [26:28:22]
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 4:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 5:11:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 5:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 6:11:35 PM
+// [GUI Memory]: 213 mb (+686kb) [28:28:00]
+// [GUI Memory]: 215 mb (+2456kb) [28:28:07]
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 6:41:35 PM
+// [GUI Memory]: 216 mb (+246kb) [28:58:00]
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 7:11:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 7:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 8:11:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 8:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 9:11:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 9:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 10:11:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 10:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 11:11:35 PM
+// HMemoryUtils.trashcanNow. Current time: 7/31/14 11:41:35 PM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 12:11:35 AM
+// [GUI Memory]: 216 mb (+386kb) [34:28:03]
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 12:41:35 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 1:11:35 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 1:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 2:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 2:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 3:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 3:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 4:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 4:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 5:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 5:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 6:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 6:41:36 AM
+// [GUI Memory]: 217 mb (+933kb) [40:58:03]
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 7:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 7:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 8:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 8:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 9:11:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 9:41:36 AM
+// HMemoryUtils.trashcanNow. Current time: 8/1/14 10:11:36 AM

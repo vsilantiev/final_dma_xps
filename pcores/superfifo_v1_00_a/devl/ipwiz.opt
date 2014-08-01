@@ -1,0 +1,9 @@
+-batch 
+-create superfifo 
+-ver 1.00.a 
+-dir "/home/chupa/cf_ad9467_zed" 
+-lang verilog 
+-bus axi4lite s 
+-rst 
+-reg 32 
+-xps 

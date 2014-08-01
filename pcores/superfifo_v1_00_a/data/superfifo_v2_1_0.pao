@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          /home/chupa/cf_ad9467_zed/pcores/superfifo_v1_00_a/data/superfifo_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Fri Jul 25 11:45:37 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib superfifo_v1_00_a user_logic verilog
+lib superfifo_v1_00_a superfifo vhdl

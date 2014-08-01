@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/devl/synthesis/init_dma_xst.prj"
+-top init_dma
+-p virtex6
+-ofn "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/devl/synthesis/init_dma_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib init_dma_v1_00_b
