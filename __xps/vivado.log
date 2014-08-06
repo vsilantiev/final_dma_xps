@@ -135,3 +135,4 @@ INFO: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:init_dma:6.0'. T
 ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 4875.777 ; gain = 21.027
 current_project testDMA
 current_project edit_ip
+current_project testDMA

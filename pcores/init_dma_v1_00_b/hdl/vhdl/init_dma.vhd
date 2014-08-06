@@ -116,6 +116,10 @@ entity init_dma is
 	 	 -- Master
     C_M_AXI_ADDR_WIDTH      : integer := 32;
     C_M_AXI_DATA_WIDTH      : integer := 32;
+	 
+	 
+	 C_S1_AXI_ADDR_WIDTH      : integer := 7;
+    C_S1_AXI_DATA_WIDTH      : integer := 32;
 
     -- ADD USER GENERICS ABOVE THIS LINE ---------------
 
@@ -162,10 +166,29 @@ entity init_dma is
     M_AXI_RRESP  : in  std_logic_vector(2-1 downto 0);
     M_AXI_RVALID : in  std_logic;
     M_AXI_RREADY : out std_logic;
-	 READY_NEXT_ADDR_DDR : out std_logic;
-	 IN_ADDR_BUFF : in std_logic_vector(31 downto 0);
 	 IRQ_DMA: in std_logic;
 	 
+	 S1_AXI_ACLK                     : in  std_logic;
+    S1_AXI_ARESETN                  : in  std_logic;
+    S1_AXI_AWADDR   : in  std_logic_vector(C_S1_AXI_ADDR_WIDTH-1 downto 0);
+    S1_AXI_AWPROT   : in  std_logic_vector(3-1 downto 0);
+    S1_AXI_AWVALID  : in  std_logic;
+    S1_AXI_AWREADY  : out std_logic;
+    S1_AXI_WDATA  : in  std_logic_vector(C_S1_AXI_DATA_WIDTH-1 downto 0);
+    S1_AXI_WSTRB  : in  std_logic_vector(C_S1_AXI_DATA_WIDTH/8-1 downto 0);
+    S1_AXI_WVALID : in  std_logic;
+    S1_AXI_WREADY : out std_logic;
+    S1_AXI_BRESP  : out std_logic_vector(2-1 downto 0);
+    S1_AXI_BVALID : out std_logic;
+    S1_AXI_BREADY : in  std_logic;
+    S1_AXI_ARADDR   : in  std_logic_vector(C_S1_AXI_ADDR_WIDTH-1 downto 0);
+    S1_AXI_ARPROT   : in  std_logic_vector(3-1 downto 0);
+    S1_AXI_ARVALID  : in  std_logic;
+    S1_AXI_ARREADY  : out std_logic;
+    S1_AXI_RDATA  : out std_logic_vector(C_S1_AXI_DATA_WIDTH-1 downto 0);
+    S1_AXI_RRESP  : out std_logic_vector(2-1 downto 0);
+    S1_AXI_RVALID : out std_logic;
+    S1_AXI_RREADY : in  std_logic;
 	 
 	 
     -- ADD USER PORTS ABOVE THIS LINE ------------------
@@ -265,7 +288,7 @@ architecture IMP of init_dma is
   ------------------------------------------
   -- Component declaration for verilog user logic
   ------------------------------------------
-  component user_logic is
+  component vova_init is
     generic
     (
       -- ADD USER GENERICS BELOW THIS LINE ---------------
@@ -273,6 +296,10 @@ architecture IMP of init_dma is
 		C_M_AXI_ADDR_WIDTH      : integer := 32;
       C_M_AXI_DATA_WIDTH      : integer := 32;
       -- ADD USER GENERICS ABOVE THIS LINE ---------------
+		
+			 
+	   C_S1_AXI_ADDR_WIDTH      : integer := 7;
+      C_S1_AXI_DATA_WIDTH      : integer := 32;
 
       -- DO NOT EDIT BELOW THIS LINE ---------------------
       -- Bus protocol parameters, do not add to or delete
@@ -305,9 +332,29 @@ architecture IMP of init_dma is
     M_AXI_RRESP  : in  std_logic_vector(2-1 downto 0);
     M_AXI_RVALID : in  std_logic;
     M_AXI_RREADY : out std_logic;
-	 READY_NEXT_ADDR_DDR : out std_logic;
-	 IN_ADDR_BUFF : in std_logic_vector(31 downto 0);
 	 IRQ_DMA: in std_logic;
+	 
+	 	 S1_AXI_ACLK                     : in  std_logic;
+    S1_AXI_ARESETN                  : in  std_logic;
+    S1_AXI_AWADDR   : in  std_logic_vector(C_S1_AXI_ADDR_WIDTH-1 downto 0);
+    S1_AXI_AWPROT   : in  std_logic_vector(3-1 downto 0);
+    S1_AXI_AWVALID  : in  std_logic;
+    S1_AXI_AWREADY  : out std_logic;
+    S1_AXI_WDATA  : in  std_logic_vector(C_S1_AXI_DATA_WIDTH-1 downto 0);
+    S1_AXI_WSTRB  : in  std_logic_vector(C_S1_AXI_DATA_WIDTH/8-1 downto 0);
+    S1_AXI_WVALID : in  std_logic;
+    S1_AXI_WREADY : out std_logic;
+    S1_AXI_BRESP  : out std_logic_vector(2-1 downto 0);
+    S1_AXI_BVALID : out std_logic;
+    S1_AXI_BREADY : in  std_logic;
+    S1_AXI_ARADDR   : in  std_logic_vector(C_S1_AXI_ADDR_WIDTH-1 downto 0);
+    S1_AXI_ARPROT   : in  std_logic_vector(3-1 downto 0);
+    S1_AXI_ARVALID  : in  std_logic;
+    S1_AXI_ARREADY  : out std_logic;
+    S1_AXI_RDATA  : out std_logic_vector(C_S1_AXI_DATA_WIDTH-1 downto 0);
+    S1_AXI_RRESP  : out std_logic_vector(2-1 downto 0);
+    S1_AXI_RVALID : out std_logic;
+    S1_AXI_RREADY : in  std_logic;
 	 
       -- ADD USER PORTS ABOVE THIS LINE ------------------
 
@@ -325,7 +372,8 @@ architecture IMP of init_dma is
       IP2Bus_Error                   : out std_logic
       -- DO NOT EDIT ABOVE THIS LINE ---------------------
     );
-  end component user_logic;
+  end component vova_init;
+
 
 begin
 
@@ -383,11 +431,13 @@ begin
   ------------------------------------------
   -- instantiate User Logic
   ------------------------------------------
-  USER_LOGIC_I : component user_logic
+  USER_LOGIC_I : component vova_init
     generic map
     (
       -- MAP USER GENERICS BELOW THIS LINE ---------------
       --USER generics mapped here
+		C_S1_AXI_ADDR_WIDTH    => C_S1_AXI_ADDR_WIDTH,
+      C_S1_AXI_DATA_WIDTH  => C_S1_AXI_DATA_WIDTH,
       -- MAP USER GENERICS ABOVE THIS LINE ---------------
 
       C_NUM_REG                      => USER_NUM_REG,
@@ -418,9 +468,29 @@ begin
     M_AXI_RRESP => M_AXI_RRESP,
     M_AXI_RVALID => M_AXI_RVALID,
     M_AXI_RREADY => M_AXI_RREADY,
-	 READY_NEXT_ADDR_DDR => READY_NEXT_ADDR_DDR,
-	 IN_ADDR_BUFF => IN_ADDR_BUFF,
 	 IRQ_DMA => IRQ_DMA,
+
+S1_AXI_ACLK => S1_AXI_ACLK,
+S1_AXI_ARESETN => S1_AXI_ARESETN,
+S1_AXI_AWADDR => S1_AXI_AWADDR,
+S1_AXI_AWPROT => S1_AXI_AWPROT,
+S1_AXI_AWVALID => S1_AXI_AWVALID,
+S1_AXI_AWREADY => S1_AXI_AWREADY,
+S1_AXI_WDATA => S1_AXI_WDATA,
+S1_AXI_WSTRB => S1_AXI_WSTRB,
+S1_AXI_WVALID => S1_AXI_WVALID,
+S1_AXI_WREADY => S1_AXI_WREADY,
+S1_AXI_BRESP => S1_AXI_BRESP,
+S1_AXI_BVALID => S1_AXI_BVALID,
+S1_AXI_BREADY => S1_AXI_BREADY,
+S1_AXI_ARADDR => S1_AXI_ARADDR,
+S1_AXI_ARPROT => S1_AXI_ARPROT,
+S1_AXI_ARVALID => S1_AXI_ARVALID,
+S1_AXI_ARREADY => S1_AXI_ARREADY,
+S1_AXI_RDATA => S1_AXI_RDATA,
+S1_AXI_RRESP => S1_AXI_RRESP,
+S1_AXI_RVALID => S1_AXI_RVALID,
+S1_AXI_RREADY => S1_AXI_RREADY,
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,
       Bus2IP_Resetn                  => ipif_Bus2IP_Resetn,

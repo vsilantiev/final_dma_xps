@@ -1,7 +1,0 @@
-INFILE=/home/vladimir/cf_ad9467_zed/implementation/system.ncd
-OUTFILE=/home/vladimir/cf_ad9467_zed/implementation/system.bit
-FAMILY=Zynq
-PART=xc7z020-1clg484
-WORKINGDIR=/home/vladimir/cf_ad9467_zed/implementation
-LICENSE=WebPack
-USER_INFO=__0_0_0

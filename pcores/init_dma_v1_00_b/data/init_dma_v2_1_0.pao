@@ -6,6 +6,7 @@
 
 lib proc_common_v3_00_a  all 
 lib axi_lite_ipif_v1_01_a  all 
-lib init_dma_v1_00_b user_logic verilog
+lib init_dma_v1_00_b vova_init verilog
+lib init_dma_v1_00_b stas_fifo verilog
 #lib init_dma_v1_00_b init_dma verilog
 lib init_dma_v1_00_b init_dma vhdl

@@ -135,3 +135,7 @@
 15:38:04.754 INFO  - Invoking Bootgen:  
 15:38:05.281 INFO  - Bootgen command execution is done. 
 16:05:45.582 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+10:39:25.879 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+10:39:42.924 INFO  - Specified output file already exists 
+10:39:43.802 INFO  - Invoking Bootgen:  
+10:39:44.333 INFO  - Bootgen command execution is done. 

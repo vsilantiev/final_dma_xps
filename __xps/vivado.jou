@@ -15,3 +15,4 @@ current_project testDMA
 ipx::edit_ip_in_project -upgrade true -name {edit_ip1} -directory {/home/vladimir/stas/final_dma/IPCore/def_stream_1.0} {/home/vladimir/stas/final_dma/IPCore/def_stream_1.0/component.xml}
 current_project testDMA
 current_project edit_ip
+current_project testDMA
