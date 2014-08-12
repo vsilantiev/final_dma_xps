@@ -31,28 +31,8 @@ module vova_init (
   M_AXI_RRESP,
   M_AXI_RVALID,
   M_AXI_RREADY,
-  IRQ_DMA,
-  S1_AXI_ACLK,
-S1_AXI_ARESETN,
-S1_AXI_AWADDR,
-S1_AXI_AWPROT,
-S1_AXI_AWVALID,
-S1_AXI_AWREADY,
-S1_AXI_WDATA,
-S1_AXI_WSTRB,
-S1_AXI_WVALID,
-S1_AXI_WREADY,
-S1_AXI_BRESP,
-S1_AXI_BVALID,
-S1_AXI_BREADY,
-S1_AXI_ARADDR,
-S1_AXI_ARPROT,
-S1_AXI_ARVALID,
-S1_AXI_ARREADY,
-S1_AXI_RDATA,
-S1_AXI_RRESP,
-S1_AXI_RVALID,
-S1_AXI_RREADY);
+  IRQ_DMA
+);
 
   parameter integer C_M_AXI_ADDR_WIDTH = 32;
   parameter integer C_M_AXI_DATA_WIDTH = 32;
@@ -83,55 +63,18 @@ S1_AXI_RREADY);
     input wire M_AXI_RVALID;
     output wire M_AXI_RREADY;
 	 
-	 wire R_NEXT_ADDR;
+	 //wire R_NEXT_ADDR;
 	 
 	 reg r_next_addr;
 	 
 	 
 	 
-	 wire [31:0] in_addr_buff;
+	 reg [31:0] in_addr_buff;
 	 
 	 
 	 
 	 input wire IRQ_DMA;
-	 
-	parameter integer C_S1_AXI_ADDR_WIDTH            = 7;
-   parameter integer C_S1_AXI_DATA_WIDTH            = 32;
 
-   // System Signals
-   input wire S1_AXI_ACLK;
-   input wire S1_AXI_ARESETN;
-
-   // Slave Interface Write Address Ports
-   input  wire [C_S1_AXI_ADDR_WIDTH-1:0] S1_AXI_AWADDR;
-   input  wire [3-1:0]                  S1_AXI_AWPROT;
-   input  wire                          S1_AXI_AWVALID;
-   output wire                          S1_AXI_AWREADY;
-
-   // Slave Interface Write Data Ports
-   input  wire [C_S1_AXI_DATA_WIDTH-1:0]   S1_AXI_WDATA;
-   input  wire [C_S1_AXI_DATA_WIDTH/8-1:0] S1_AXI_WSTRB;
-   input  wire                          S1_AXI_WVALID;
-   output wire                          S1_AXI_WREADY;
-
-   // Slave Interface Write Response Ports
-   output wire [2-1:0]                 S1_AXI_BRESP;
-   output wire                         S1_AXI_BVALID;
-   input  wire                         S1_AXI_BREADY;
-
-   // Slave Interface Read Address Ports
-   input  wire [C_S1_AXI_ADDR_WIDTH-1:0]   S1_AXI_ARADDR;
-   input  wire [3-1:0]                  S1_AXI_ARPROT;
-   input  wire                          S1_AXI_ARVALID;
-   output wire                          S1_AXI_ARREADY;
-
-   // Slave Interface Read Data Ports
-   output wire [C_S1_AXI_DATA_WIDTH-1:0]  S1_AXI_RDATA;
-   output wire [2-1:0]                 S1_AXI_RRESP;
-   output wire                         S1_AXI_RVALID;
-   input  wire                         S1_AXI_RREADY;
-	 
-	 
 	 // Slave Interface
     input           Bus2IP_Clk;
     input           Bus2IP_Resetn;
@@ -154,7 +97,7 @@ S1_AXI_RREADY);
     reg     [31:0]  IP2Bus_Data;
     reg             IP2Bus_Error;
 	 
-	 reg [31:0] ADDR;
+	 ///reg [31:0] ADDR;
 
     reg [31:0] count_irq_dma;
        reg [2:0] 	write_index;
@@ -163,7 +106,7 @@ S1_AXI_RREADY);
     wire            up_ack_s;
 
     assign up_rwce_s = (Bus2IP_RdCE == 0) ? Bus2IP_WrCE : Bus2IP_RdCE;
-	assign R_NEXT_ADDR = r_next_addr;
+	///assign R_NEXT_ADDR = r_next_addr;
 	
   always @(negedge Bus2IP_Resetn or posedge Bus2IP_Clk) begin
     if (Bus2IP_Resetn == 0) begin
@@ -244,23 +187,181 @@ S1_AXI_RREADY);
 		//PART SLAVE
   // Processor write interface (see regmap.txt file in the pcore root directory
   // for address map and details of register functions).
-	reg [0:31] up_len_ref = 'd0;
-	reg [0:31] up_addr_buff = 'd0;
+	reg [31:0] up_len_ref = 'd0;
+	reg [31:0] up_addr_buff1 = 'd0;
+	reg [31:0] up_addr_buff2 = 'd0;
+	reg [31:0] up_addr_buff3 = 'd0;
+	reg [31:0] up_addr_buff4 = 'd0;
+	reg [31:0] up_addr_buff5 = 'd0;
+	reg [31:0] up_addr_buff6 = 'd0;
+	reg [31:0] up_addr_buff7 = 'd0;
+	reg [31:0] up_addr_buff8 = 'd0;
+	reg [31:0] up_addr_buff9 = 'd0;
+	reg [31:0] up_addr_buff10 = 'd0;
+	reg [31:0] up_addr_buff11 = 'd0;
+	reg [31:0] up_addr_buff12 = 'd0;
+	reg [31:0] up_addr_buff13 = 'd0;
+	reg [31:0] up_addr_buff14 = 'd0;
+	reg [31:0] up_addr_buff15 = 'd0;
+	reg [31:0] up_addr_buff16 = 'd0;
+	reg [31:0] up_addr_buff17 = 'd0;
+	reg [31:0] up_addr_buff18 = 'd0;
+	reg [31:0] up_addr_buff19 = 'd0;
+	reg [31:0] up_addr_buff20 = 'd0;
+	reg [31:0] up_addr_buff21 = 'd0;
+	reg [31:0] up_addr_buff22 = 'd0;
+	reg [31:0] up_addr_buff23 = 'd0;
+	reg [31:0] up_addr_buff24 = 'd0;
+	reg [31:0] up_addr_buff25 = 'd0;
+	reg [31:0] up_addr_buff26 = 'd0;
+	reg [31:0] up_addr_buff27 = 'd0;
+	reg [31:0] up_addr_buff28 = 'd0;
+	reg [31:0] up_addr_buff29 = 'd0;
+	reg [31:0] up_addr_buff30 = 'd0;
+	reg [31:0] up_addr_buff31 = 'd0;
+	reg [31:0] up_addr_buff32 = 'd0;
 	/////assign up_wr_s = up_sel & ~up_rwn;
+  reg [4:0] index_reg = 'd0;
+  	  always @(negedge Bus2IP_Resetn or posedge Bus2IP_Clk)										      
+      begin                                                                        
+       // Initiates AXI transaction delay    
+       if (Bus2IP_Resetn == 0)                                                   
+         begin                                                                    
+				index_reg <= 0;                                                  
+         end                                                                               
+       else if ((IP2Bus_WrAck) && (up_addr == 5'h01))                                                                    
+			index_reg <= index_reg + 1;
+		 else if (rs_next_addr && index_reg != 0)
+			index_reg <= index_reg - 1;
+      end
+  reg [31:0] count_enter;
+  reg [31:0] pre_addr_buff;
   always @(negedge Bus2IP_Resetn or posedge Bus2IP_Clk) begin
     if (Bus2IP_Resetn == 0) begin
       up_len_ref <= 'd0;
-		up_addr_buff <= 'd0;
+		in_addr_buff <= 'd0;
+		up_addr_buff1 <= 'd0;
+		up_addr_buff2 <= 'd0;
+		up_addr_buff3 <= 'd0;
+		up_addr_buff4 <= 'd0;
+		up_addr_buff5 <= 'd0;
+		up_addr_buff6 <= 'd0;
+		up_addr_buff7 <= 'd0;
+		up_addr_buff8 <= 'd0;
+		up_addr_buff9 <= 'd0;
+		up_addr_buff10 <= 'd0;
+		up_addr_buff11 <= 'd0;
+		up_addr_buff12 <= 'd0;
+		up_addr_buff13 <= 'd0;
+		up_addr_buff14 <= 'd0;
+		up_addr_buff15 <= 'd0;
+		up_addr_buff16 <= 'd0;
+		up_addr_buff17 <= 'd0;
+		up_addr_buff18 <= 'd0;
+		up_addr_buff19 <= 'd0;
+		up_addr_buff20 <= 'd0;
+		up_addr_buff21 <= 'd0;
+		up_addr_buff22 <= 'd0;
+		up_addr_buff23 <= 'd0;
+		up_addr_buff24 <= 'd0;
+		up_addr_buff25 <= 'd0;
+		up_addr_buff26 <= 'd0;
+		up_addr_buff27 <= 'd0;
+		up_addr_buff28 <= 'd0;
+		up_addr_buff29 <= 'd0;
+		up_addr_buff30 <= 'd0;
+		up_addr_buff31 <= 'd0;
+		up_addr_buff32 <= 'd0;
+		count_enter <= 'd0;
+		//index_reg <= 'd0;
     end else begin
       if ((up_addr == 5'h00) && (up_sel & ~up_rwn)) begin
         up_len_ref <= up_wdata;
       end
 		if ((up_addr == 5'h01) && (up_sel & ~up_rwn)) begin
-        up_addr_buff <= up_wdata;
+		  //index_reg <= index_reg + 1;
+		case (index_reg)
+		  0: up_addr_buff1 <= up_wdata;
+		  1: up_addr_buff2 <= up_wdata;
+		  2: up_addr_buff3 <= up_wdata;		
+		  3: up_addr_buff4 <= up_wdata;
+		  4: up_addr_buff5 <= up_wdata;
+		  5: up_addr_buff6 <= up_wdata;
+		  6: up_addr_buff7 <= up_wdata;
+		  7: up_addr_buff8 <= up_wdata;
+		  8: up_addr_buff9 <= up_wdata;
+		  9: up_addr_buff10 <= up_wdata;
+		  10: up_addr_buff11 <= up_wdata;
+		  11: up_addr_buff12 <= up_wdata;
+		  12: up_addr_buff13 <= up_wdata;											  
+		  13: up_addr_buff14 <= up_wdata;
+		  14: up_addr_buff15 <= up_wdata;
+		  15: up_addr_buff16 <= up_wdata;
+		  16: up_addr_buff17 <= up_wdata;
+		  17: up_addr_buff18 <= up_wdata;
+		  18: up_addr_buff19 <= up_wdata;
+		  19: up_addr_buff20 <= up_wdata;
+		  20: up_addr_buff21 <= up_wdata;
+		  21: up_addr_buff22 <= up_wdata;
+		  22: up_addr_buff23 <= up_wdata;
+		  23: up_addr_buff24 <= up_wdata;
+		  24: up_addr_buff25 <= up_wdata;
+		  25: up_addr_buff26 <= up_wdata;
+		  26: up_addr_buff27 <= up_wdata;
+		  27: up_addr_buff28 <= up_wdata;
+		  28: up_addr_buff29 <= up_wdata;
+		  29: up_addr_buff30 <= up_wdata;
+		  30: up_addr_buff31 <= up_wdata;
+		  31: up_addr_buff32 <= up_wdata;
+		endcase
       end
+//Надо сделать один сдвиг
+		if (rs_next_addr) 
+	
+		begin
+		count_enter <= count_enter + 1;
+		in_addr_buff <= up_addr_buff1;
+		up_addr_buff1 <= up_addr_buff2;
+		up_addr_buff2 <= up_addr_buff3;
+		up_addr_buff3 <= up_addr_buff4;
+		up_addr_buff4 <= up_addr_buff5;
+		up_addr_buff5 <= up_addr_buff6;
+		up_addr_buff6 <= up_addr_buff7;
+		up_addr_buff7 <= up_addr_buff8;
+		up_addr_buff8 <= up_addr_buff9;
+		up_addr_buff9 <= up_addr_buff10;
+		up_addr_buff10 <= up_addr_buff11;
+		up_addr_buff11 <= up_addr_buff12;
+		up_addr_buff12 <= up_addr_buff13;
+		up_addr_buff13 <= up_addr_buff14;
+		up_addr_buff14 <= up_addr_buff15;
+		up_addr_buff15 <= up_addr_buff16;
+		up_addr_buff16 <= up_addr_buff17;
+		up_addr_buff17 <= up_addr_buff18;
+		up_addr_buff18 <= up_addr_buff19;
+		up_addr_buff19 <= up_addr_buff20;
+		up_addr_buff20 <= up_addr_buff21;
+		up_addr_buff21 <= up_addr_buff22;
+		up_addr_buff22 <= up_addr_buff23;
+		up_addr_buff23 <= up_addr_buff24;
+		up_addr_buff24 <= up_addr_buff25;
+		up_addr_buff25 <= up_addr_buff26;
+		up_addr_buff26 <= up_addr_buff27;
+		up_addr_buff27 <= up_addr_buff28;
+		up_addr_buff28 <= up_addr_buff29;
+		up_addr_buff29 <= up_addr_buff30;
+		up_addr_buff30 <= up_addr_buff31;
+		up_addr_buff31 <= up_addr_buff32;		
+		up_addr_buff32 <= 0;
+		end
+
+
 		end
 	end
 	// Processor read interface
+
+
+
 
   always @(negedge Bus2IP_Resetn or posedge Bus2IP_Clk) begin
     if (Bus2IP_Resetn == 0) begin
@@ -270,10 +371,20 @@ S1_AXI_RREADY);
       up_ack <= 'd0;
     end else begin
       case (up_addr)
-        5'h00: up_rdata <= up_len_ref;
-		  5'h01: up_rdata <= in_addr_buff;
-		  5'h02: up_rdata <= count_irq_dma;
-		  5'h03: up_rdata <= write_index;
+        5'h00: up_rdata <= up_len_ref; //0
+		  5'h01: up_rdata <= in_addr_buff; //4
+		  5'h02: up_rdata <= count_irq_dma; //8
+		  5'h03: up_rdata <= write_index; //c
+		  5'h04: up_rdata <= index_reg; //10
+		  5'h05: up_rdata <= pre_addr_buff; //14
+		  5'h06: up_rdata <= up_addr_buff1; //18
+		  5'h07: up_rdata <= up_addr_buff2; //1c
+		  5'h08: up_rdata <= up_addr_buff3; //20
+		  5'h09: up_rdata <= up_addr_buff4; //24
+		  5'h0A: up_rdata <= up_addr_buff32; //28
+		  5'h0B: up_rdata <= count_enter; //2c
+		  5'h0C: up_rdata <= count_4m; // 30
+		  5'h0D: up_rdata <= r_next_addr; //34
         default: up_rdata <= 0;
       endcase
 		up_sel_d <= up_sel;
@@ -357,8 +468,14 @@ assign M_AXI_RREADY = rready;
 //////////////////////
 reg  	irq_dma_ff = 'd0;
 reg  	irq_dma_ff2 = 'd0;
+
+reg  	s_ff = 'd0;
+reg  	s_ff2 = 'd0;
+
 wire  irq_dma_pulse;
 assign irq_dma_pulse	= (!irq_dma_ff2) && irq_dma_ff;
+assign rs_next_addr	= (!s_ff2) && s_ff;
+
 
 	  always @(posedge M_AXI_ACLK)										      
       begin                                                                        
@@ -374,12 +491,32 @@ assign irq_dma_pulse	= (!irq_dma_ff2) && irq_dma_ff;
            irq_dma_ff2 <= irq_dma_ff;                                                                 
          end                                                                      
       end
+           
+	  always @(posedge M_AXI_ACLK)										      
+      begin                                                                        
+       // Сигнал 1 такт нужен новый вектор    
+       if (M_AXI_ARESETN == 0)                                                   
+         begin                                                                    
+           s_ff <= 1'b0;                                                   
+           s_ff2 <= 1'b0;                                                   
+         end                                                                               
+       else                                                                       
+         begin
+           s_ff <= r_next_addr;
+           s_ff2 <= s_ff;                                                                 
+         end                                                                      
+      end
+			  
+reg [31:0] count_4m;
 	  always @(posedge M_AXI_ACLK)										      
       begin                                                                            
        if (M_AXI_ARESETN == 0)                                                   
          begin                                                                    
 				count_irq_dma <= 0;
-				r_next_addr <= 0;	
+				count_4m <= 0;//Debug
+				r_next_addr <= 0;
+				//n <= 1'b0;                                                   
+            //n1 <= 1'b0; 
          end                                                                               
        else if (irq_dma_pulse && ((in_addr_buff + (up_len_ref*4)*count_irq_dma) <= (in_addr_buff + 32'h400000)))                                                                       
 		 //else if (irq_dma_pulse)
@@ -387,14 +524,38 @@ assign irq_dma_pulse	= (!irq_dma_ff2) && irq_dma_ff;
 				count_irq_dma <= count_irq_dma + 1;
 				r_next_addr <= 0;	
          end
-       else if ((in_addr_buff + (up_len_ref*4)*count_irq_dma) >= (in_addr_buff + 32'h400000))
+       else if ((in_addr_buff + (up_len_ref*4)*count_irq_dma) >= (in_addr_buff + 32'h400000))//Конец 4M нужен новый вектор
 			begin
+				count_4m <= count_4m+1;//Debug
 				count_irq_dma <= 0;
 				r_next_addr <= 1;
 			end
-		 //else 
-			//count_irq_dma <= 0;
+		  else if ((in_addr_buff == 0) && ((IP2Bus_WrAck) && (up_addr == 5'h01)))
+			 begin
+				r_next_addr <= 1;
+			 end
+		 else 
+			r_next_addr <= 0;
       end  
+
+
+
+	  always @(posedge M_AXI_ACLK)										      
+      begin                                                                        
+       // Initiates AXI transaction delay    
+       if (M_AXI_ARESETN == 0)                                                   
+         begin                                                                    
+				pre_addr_buff <= 0;
+         end                                                                               
+       else if (rs_next_addr == 1)// Сравнял после передачи                                                                     
+         begin
+			pre_addr_buff <= in_addr_buff;
+         //Надо выдать прерывание для Анотолия здесь
+			end                                                                      
+      end
+
+
+
 
 ///////////////////////
 //Write Address Channel
@@ -579,30 +740,6 @@ always @(posedge M_AXI_ACLK)
        writes_done <= writes_done;
  end
 //END_PART_MASTER	 
-  stas_fifo #(.C_S1_AXI_ADDR_WIDTH(C_S1_AXI_ADDR_WIDTH), .C_S1_AXI_DATA_WIDTH(C_S1_AXI_DATA_WIDTH)) i_fifo (
- .S1_AXI_ACLK(S1_AXI_ACLK),
-.S1_AXI_ARESETN(S1_AXI_ARESETN),
-.S1_AXI_AWADDR(S1_AXI_AWADDR),
-.S1_AXI_AWPROT(S1_AXI_AWPROT),
-.S1_AXI_AWVALID(S1_AXI_AWVALID),
-.S1_AXI_AWREADY(S1_AXI_AWREADY),
-.S1_AXI_WDATA(S1_AXI_WDATA),
-.S1_AXI_WSTRB(S1_AXI_WSTRB),
-.S1_AXI_WVALID(S1_AXI_WVALID),
-.S1_AXI_WREADY(S1_AXI_WREADY),
-.S1_AXI_BRESP(S1_AXI_BRESP),
-.S1_AXI_BVALID(S1_AXI_BVALID),
-.S1_AXI_BREADY(S1_AXI_BREADY),
-.S1_AXI_ARADDR(S1_AXI_ARADDR),
-.S1_AXI_ARPROT(S1_AXI_ARPROT),
-.S1_AXI_ARVALID(S1_AXI_ARVALID),
-.S1_AXI_ARREADY(S1_AXI_ARREADY),
-.S1_AXI_RDATA(S1_AXI_RDATA),
-.S1_AXI_RRESP(S1_AXI_RRESP),
-.S1_AXI_RVALID(S1_AXI_RVALID),
-.S1_AXI_RREADY(S1_AXI_RREADY),
-.ready_to_transmit (R_NEXT_ADDR),
-.address_to_init (in_addr_buff)
-	 );
+
 
 endmodule

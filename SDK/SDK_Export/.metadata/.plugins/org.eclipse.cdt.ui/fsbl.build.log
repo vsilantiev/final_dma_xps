@@ -1,6 +1,6 @@
-10:39:33 **** Incremental Build of configuration Release for project fsbl ****
+14:05:15 **** Build of configuration Release for project fsbl ****
 make all 
 make: Цель `all' не требует выполнения команд.
 
-10:39:33 Build Finished (took 79ms)
+14:05:16 Build Finished (took 65ms)
 
