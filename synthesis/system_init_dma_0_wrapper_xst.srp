@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vladimir/cf_ad9467_zed/synthesis/xst_temp_dir/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 
@@ -519,15 +519,16 @@ INFO:HDLCompiler:679 - "/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcor
 Going to verilog side to elaborate module vova_init
 
 Elaborating module <vova_init(C_M_AXI_ADDR_WIDTH=32,C_M_AXI_DATA_WIDTH=32,C_NUM_REG=32,C_SLV_DWIDTH=32,C_NUM_COMMANDS=6)>.
-WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 233: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 235: Result of 32-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:1127 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 366: Assignment to up_ack ignored, since the identifier is never used
-WARNING:HDLCompiler:91 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 674: Signal <in_addr_buff> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 676: Signal <up_len_ref> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 710: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:634 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 404: Net <arvalid> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 405: Net <rready> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 409: Net <araddr[31]> does not have a driver.
+WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 221: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 224: Result of 32-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:1127 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 351: Assignment to up_ack ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 440: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 595: Signal <in_addr_buff> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 597: Signal <up_len_ref> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 611: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:634 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 400: Net <arvalid> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 401: Net <rready> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/verilog/vova_init.v" Line 405: Net <araddr[31]> does not have a driver.
 Back to vhdl to continue elaboration
 
 =========================================================================
@@ -562,9 +563,9 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
     Set property "MAX_FANOUT = 10000" for signal <S_AXI_ARESETN>.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
-INFO:Xst:3210 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/vhdl/init_dma.vhd" line 334: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/vhdl/init_dma.vhd" line 334: Output port <Bus2IP_CS> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/vhdl/init_dma.vhd" line 334: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/vhdl/init_dma.vhd" line 335: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/vhdl/init_dma.vhd" line 335: Output port <Bus2IP_CS> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/vladimir/cf_ad9467_zed/pcores/init_dma_v1_00_b/hdl/vhdl/init_dma.vhd" line 335: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <init_dma> synthesized.
@@ -1018,10 +1019,10 @@ WARNING:Xst:653 - Signal <rready> is used but never assigned. This sourceless si
     Found 1-bit register for signal <up_sel_2d>.
     Found 1-bit register for signal <up_sel>.
     Found 5-bit register for signal <up_addr>.
-    Found 5-bit register for signal <index_reg>.
     Found 32-bit register for signal <up_wdata>.
     Found 32-bit register for signal <IP2Bus_Data>.
     Found 32-bit register for signal <up_len_ref>.
+    Found 32-bit register for signal <up_per>.
     Found 32-bit register for signal <in_addr_buff>.
     Found 32-bit register for signal <up_addr_buff1>.
     Found 32-bit register for signal <up_addr_buff2>.
@@ -1057,42 +1058,59 @@ WARNING:Xst:653 - Signal <rready> is used but never assigned. This sourceless si
     Found 32-bit register for signal <up_addr_buff32>.
     Found 32-bit register for signal <count_enter>.
     Found 32-bit register for signal <up_rdata>.
+    Found 7-bit register for signal <index_reg>.
     Found 1-bit register for signal <irq_dma_ff>.
     Found 1-bit register for signal <irq_dma_ff2>.
     Found 1-bit register for signal <s_ff>.
     Found 1-bit register for signal <s_ff2>.
+    Found 32-bit register for signal <pe>.
     Found 32-bit register for signal <count_irq_dma>.
     Found 32-bit register for signal <count_4m>.
     Found 1-bit register for signal <r_next_addr>.
+    Found 32-bit register for signal <count_f>.
+    Found 32-bit register for signal <count_f1>.
+    Found 32-bit register for signal <count_f2>.
+    Found 32-bit register for signal <count_f3>.
     Found 32-bit register for signal <pre_addr_buff>.
+    Found 32-bit register for signal <debug_count_irq>.
+    Found 32-bit register for signal <irq_4m>.
     Found 1-bit register for signal <awvalid>.
     Found 1-bit register for signal <wvalid>.
     Found 1-bit register for signal <bready>.
     Found 1-bit register for signal <push_write>.
     Found 3-bit register for signal <write_index>.
-    Found 30-bit subtractor for signal <GND_49_o_GND_49_o_sub_257_OUT> created at line 676.
-    Found 5-bit adder for signal <index_reg[4]_GND_49_o_add_47_OUT> created at line 233.
-    Found 32-bit adder for signal <count_enter[31]_GND_49_o_add_121_OUT> created at line 322.
-    Found 32-bit adder for signal <count_irq_dma[31]_GND_49_o_add_225_OUT> created at line 524.
-    Found 32-bit adder for signal <in_addr_buff[31]_GND_49_o_add_228_OUT> created at line 527.
-    Found 32-bit adder for signal <count_4m[31]_GND_49_o_add_230_OUT> created at line 529.
-    Found 32-bit adder for signal <in_addr_buff[31]_up_len_ref[29]_add_255_OUT> created at line 674.
-    Found 32-bit adder for signal <GND_49_o_GND_49_o_add_257_OUT> created at line 676.
-    Found 3-bit adder for signal <write_index[2]_GND_49_o_add_263_OUT> created at line 710.
-    Found 5-bit subtractor for signal <GND_49_o_GND_49_o_sub_50_OUT<4:0>> created at line 235.
-    Found 32x32-bit multiplier for signal <n0489> created at line 674.
+    Found 30-bit subtractor for signal <GND_49_o_GND_49_o_sub_297_OUT> created at line 597.
+    Found 7-bit adder for signal <index_reg[6]_GND_49_o_add_47_OUT> created at line 221.
+    Found 32-bit adder for signal <count_enter[31]_GND_49_o_add_123_OUT> created at line 313.
+    Found 32-bit adder for signal <pe[31]_GND_49_o_add_211_OUT> created at line 473.
+    Found 32-bit adder for signal <up_per[31]_GND_49_o_add_214_OUT> created at line 475.
+    Found 32-bit adder for signal <count_irq_dma[31]_GND_49_o_add_226_OUT> created at line 499.
+    Found 32-bit adder for signal <count_f2[31]_GND_49_o_add_228_OUT> created at line 501.
+    Found 32-bit adder for signal <in_addr_buff[31]_GND_49_o_add_232_OUT> created at line 503.
+    Found 32-bit adder for signal <count_4m[31]_GND_49_o_add_234_OUT> created at line 504.
+    Found 32-bit adder for signal <count_f3[31]_GND_49_o_add_236_OUT> created at line 507.
+    Found 32-bit adder for signal <count_f[31]_GND_49_o_add_241_OUT> created at line 512.
+    Found 32-bit adder for signal <count_f1[31]_GND_49_o_add_244_OUT> created at line 515.
+    Found 32-bit adder for signal <debug_count_irq[31]_GND_49_o_add_278_OUT> created at line 537.
+    Found 32-bit adder for signal <in_addr_buff[31]_up_len_ref[29]_add_295_OUT> created at line 595.
+    Found 32-bit adder for signal <GND_49_o_GND_49_o_add_297_OUT> created at line 597.
+    Found 3-bit adder for signal <write_index[2]_GND_49_o_add_303_OUT> created at line 611.
+    Found 7-bit subtractor for signal <GND_49_o_GND_49_o_sub_50_OUT<6:0>> created at line 224.
+    Found 32x32-bit multiplier for signal <n0570> created at line 595.
     Found 8x32-bit Read Only RAM for signal <awaddr>
-    Found 32-bit 15-to-1 multiplexer for signal <_n0750> created at line 373.
-    Found 32-bit comparator lessequal for signal <n0245> created at line 521
-    Found 32-bit comparator greater for signal <n0250> created at line 527
+    Found 32-bit 24-to-1 multiplexer for signal <up_addr[4]_GND_49_o_wide_mux_195_OUT> created at line 358.
+    Found 32-bit comparator greater for signal <up_per[31]_up_len_ref[31]_LessThan_211_o> created at line 470
+    Found 32-bit comparator equal for signal <go> created at line 475
+    Found 32-bit comparator lessequal for signal <n0245> created at line 498
+    Found 32-bit comparator greater for signal <n0252> created at line 503
     WARNING:Xst:2404 -  FFs/Latches <IP2Bus_Error<0:0>> (without init value) have a constant value of 0 in block <vova_init>.
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Multiplier(s).
-	inferred   9 Adder/Subtractor(s).
-	inferred 1340 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-	inferred  42 Multiplexer(s).
+	inferred  16 Adder/Subtractor(s).
+	inferred 1598 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  44 Multiplexer(s).
 Unit <vova_init> synthesized.
 
 =========================================================================
@@ -1103,29 +1121,33 @@ Macro Statistics
  8x32-bit single-port Read Only RAM                    : 1
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 17
  3-bit adder                                           : 1
  30-bit subtractor                                     : 1
- 32-bit adder                                          : 6
+ 32-bit adder                                          : 13
  4-bit adder                                           : 1
- 5-bit addsub                                          : 1
-# Registers                                            : 100
+ 7-bit addsub                                          : 1
+# Registers                                            : 108
  1-bit register                                        : 52
  2-bit register                                        : 2
  3-bit register                                        : 1
- 32-bit register                                       : 42
+ 32-bit register                                       : 50
  4-bit register                                        : 1
- 5-bit register                                        : 2
-# Comparators                                          : 2
- 32-bit comparator greater                             : 1
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+# Comparators                                          : 4
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 76
+# Multiplexers                                         : 78
  1-bit 2-to-1 multiplexer                              : 39
- 32-bit 15-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 36
+ 32-bit 2-to-1 multiplexer                             : 37
+ 32-bit 24-to-1 multiplexer                            : 1
+ 7-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
@@ -1137,10 +1159,15 @@ The following registers are absorbed into counter <INCLUDE_DPHASE_TIMER.dpto_cnt
 Unit <slave_attachment> synthesized (advanced).
 
 Synthesizing (advanced) Unit <vova_init>.
-The following registers are absorbed into counter <index_reg>: 1 register on signal <index_reg>.
+The following registers are absorbed into accumulator <index_reg>: 1 register on signal <index_reg>.
 The following registers are absorbed into counter <count_enter>: 1 register on signal <count_enter>.
 The following registers are absorbed into counter <count_irq_dma>: 1 register on signal <count_irq_dma>.
 The following registers are absorbed into counter <count_4m>: 1 register on signal <count_4m>.
+The following registers are absorbed into counter <count_f>: 1 register on signal <count_f>.
+The following registers are absorbed into counter <count_f1>: 1 register on signal <count_f1>.
+The following registers are absorbed into counter <count_f2>: 1 register on signal <count_f2>.
+The following registers are absorbed into counter <count_f3>: 1 register on signal <count_f3>.
+The following registers are absorbed into counter <debug_count_irq>: 1 register on signal <debug_count_irq>.
 The following registers are absorbed into counter <write_index>: 1 register on signal <write_index>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_awaddr> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
@@ -1163,23 +1190,26 @@ Macro Statistics
  8x32-bit single-port distributed Read Only RAM        : 1
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 4
+# Adders/Subtractors                                   : 6
  30-bit subtractor                                     : 1
- 32-bit adder                                          : 3
-# Counters                                             : 6
+ 32-bit adder                                          : 5
+# Counters                                             : 10
  3-bit up counter                                      : 1
- 32-bit up counter                                     : 3
+ 32-bit up counter                                     : 8
  4-bit up counter                                      : 1
- 5-bit updown counter                                  : 1
-# Registers                                            : 1309
- Flip-Flops                                            : 1309
-# Comparators                                          : 2
- 32-bit comparator greater                             : 1
+# Accumulators                                         : 1
+ 7-bit updown accumulator                              : 1
+# Registers                                            : 1405
+ Flip-Flops                                            : 1405
+# Comparators                                          : 4
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 198
- 1-bit 15-to-1 multiplexer                             : 32
+# Multiplexers                                         : 200
  1-bit 2-to-1 multiplexer                              : 135
- 32-bit 2-to-1 multiplexer                             : 31
+ 1-bit 24-to-1 multiplexer                             : 32
+ 32-bit 2-to-1 multiplexer                             : 32
+ 7-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
 =========================================================================
@@ -1199,7 +1229,7 @@ Optimizing FSM <init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <
  sm_write | 10
  sm_resp  | 11
 ----------------------
-WARNING:Xst:2677 - Node <Mmult_n04893> of sequential type is unconnected in block <vova_init>.
+WARNING:Xst:2677 - Node <Mmult_n05703> of sequential type is unconnected in block <vova_init>.
 
 Optimizing unit <system_init_dma_0_wrapper> ...
 
@@ -1214,7 +1244,7 @@ WARNING:Xst:2677 - Node <init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system_init_dma_0_wrapper, actual ratio is 4.
+Found area constraint ratio of 100 (+ 0) on block system_init_dma_0_wrapper, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -1222,8 +1252,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1414
- Flip-Flops                                            : 1414
+# Registers                                            : 1672
+ Flip-Flops                                            : 1672
 
 =========================================================================
 
@@ -1246,25 +1276,25 @@ Top Level Output File Name         : system_init_dma_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2191
+# BELS                             : 3242
 #      GND                         : 1
-#      INV                         : 42
-#      LUT1                        : 77
-#      LUT2                        : 88
-#      LUT3                        : 86
-#      LUT4                        : 1104
-#      LUT5                        : 169
-#      LUT6                        : 241
-#      MUXCY                       : 200
-#      MUXF7                       : 9
+#      INV                         : 50
+#      LUT1                        : 294
+#      LUT2                        : 91
+#      LUT3                        : 186
+#      LUT4                        : 1134
+#      LUT5                        : 225
+#      LUT6                        : 382
+#      MUXCY                       : 443
+#      MUXF7                       : 38
 #      VCC                         : 1
-#      XORCY                       : 173
-# FlipFlops/Latches                : 1414
+#      XORCY                       : 397
+# FlipFlops/Latches                : 1672
 #      FD                          : 2
 #      FDC                         : 107
-#      FDCE                        : 1125
-#      FDR                         : 17
-#      FDRE                        : 163
+#      FDCE                        : 1159
+#      FDR                         : 81
+#      FDRE                        : 323
 # DSPs                             : 3
 #      DSP48E1                     : 3
 
@@ -1275,19 +1305,19 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1414  out of  106400     1%  
- Number of Slice LUTs:                 1807  out of  53200     3%  
-    Number used as Logic:              1807  out of  53200     3%  
+ Number of Slice Registers:            1672  out of  106400     1%  
+ Number of Slice LUTs:                 2362  out of  53200     4%  
+    Number used as Logic:              2362  out of  53200     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1994
-   Number with an unused Flip Flop:     580  out of   1994    29%  
-   Number with an unused LUT:           187  out of   1994     9%  
-   Number of fully used LUT-FF pairs:  1227  out of   1994    61%  
-   Number of unique control sets:        47
+ Number of LUT Flip Flop pairs used:   2573
+   Number with an unused Flip Flop:     901  out of   2573    35%  
+   Number with an unused LUT:           211  out of   2573     8%  
+   Number of fully used LUT-FF pairs:  1461  out of   2573    56%  
+   Number of unique control sets:        53
 
 IO Utilization: 
- Number of IOs:                         303
+ Number of IOs:                         304
  Number of bonded IOBs:                   0  out of    200     0%  
 
 Specific Feature Utilization:
@@ -1311,12 +1341,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+---------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                       | Load  |
------------------------------------+---------------------------------------------+-------+
-M_AXI_ACLK                         | NONE(init_dma_0/USER_LOGIC_I/write_index_2) | 108   |
-S_AXI_ACLK                         | NONE(init_dma_0/USER_LOGIC_I/count_enter_31)| 1306  |
------------------------------------+---------------------------------------------+-------+
+-----------------------------------+--------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                      | Load  |
+-----------------------------------+--------------------------------------------+-------+
+S_AXI_ACLK                         | NONE(init_dma_0/USER_LOGIC_I/index_reg_6)  | 1340  |
+M_AXI_ACLK                         | NONE(init_dma_0/USER_LOGIC_I/write_index_2)| 332   |
+-----------------------------------+--------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1327,7 +1357,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 11.923ns (Maximum Frequency: 83.870MHz)
+   Minimum period: 11.938ns (Maximum Frequency: 83.768MHz)
    Minimum input arrival time before clock: 1.219ns
    Maximum output required time after clock: 9.916ns
    Maximum combinational path delay: No path found
@@ -1337,11 +1367,45 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'M_AXI_ACLK'
-  Clock period: 11.923ns (frequency: 83.870MHz)
-  Total number of paths / destination ports: 6633408533 / 179
+Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
+  Clock period: 8.388ns (frequency: 119.224MHz)
+  Total number of paths / destination ports: 290383 / 2538
 -------------------------------------------------------------------------
-Delay:               11.923ns (Levels of Logic = 53)
+Delay:               8.388ns (Levels of Logic = 13)
+  Source:            init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 (FF)
+  Destination:       init_dma_0/USER_LOGIC_I/up_addr_4 (FF)
+  Source Clock:      S_AXI_ACLK rising
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 to init_dma_0/USER_LOGIC_I/up_addr_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.282   0.766  init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 (init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14)
+     LUT6:I0->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>1_F (N26)
+     MUXF7:I0->O           2   0.214   0.745  init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>1 (init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>)
+     LUT6:I0->O           64   0.053   0.573  init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>7 (init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o)
+     LUT3:I2->O            3   0.053   0.616  init_dma_0/USER_LOGIC_I/Mmux_up_rwce_s281 (init_dma_0/USER_LOGIC_I/up_rwce_s<5>)
+     LUT6:I3->O            3   0.053   0.427  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_21_o<31>2221 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_21_o<31>222)
+     LUT6:I5->O            4   0.053   0.433  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_25_o<31>12 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_25_o<31>1)
+     LUT5:I4->O            4   0.053   0.745  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_10_o<31>11 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_10_o<31>1)
+     LUT6:I1->O            3   0.053   0.739  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_19_o<31>11 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_19_o<31>1)
+     LUT6:I1->O            2   0.053   0.641  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_22_o<31>1 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_22_o)
+     LUT6:I2->O            1   0.053   0.635  init_dma_0/USER_LOGIC_I/_n10761 (init_dma_0/USER_LOGIC_I/_n10761)
+     LUT6:I2->O            1   0.053   0.485  init_dma_0/USER_LOGIC_I/_n10763 (init_dma_0/USER_LOGIC_I/_n10763)
+     LUT6:I4->O            5   0.053   0.440  init_dma_0/USER_LOGIC_I/_n10768 (init_dma_0/USER_LOGIC_I/_n1076)
+     LUT6:I5->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_select_38_OUT<5>4 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_select_38_OUT<0>)
+     FDC:D                     0.011          init_dma_0/USER_LOGIC_I/up_addr_0
+    ----------------------------------------
+    Total                      8.388ns (1.143ns logic, 7.245ns route)
+                                       (13.6% logic, 86.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M_AXI_ACLK'
+  Clock period: 11.938ns (frequency: 83.768MHz)
+  Total number of paths / destination ports: 8786870132 / 595
+-------------------------------------------------------------------------
+Delay:               11.938ns (Levels of Logic = 53)
   Source:            init_dma_0/USER_LOGIC_I/count_irq_dma_16 (FF)
   Destination:       init_dma_0/USER_LOGIC_I/count_irq_dma_31 (FF)
   Source Clock:      M_AXI_ACLK rising
@@ -1352,26 +1416,26 @@ Delay:               11.923ns (Levels of Logic = 53)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             3   0.282   0.413  init_dma_0/USER_LOGIC_I/count_irq_dma_16 (init_dma_0/USER_LOGIC_I/count_irq_dma_16)
-     DSP48E1:A16->PCOUT47    1   4.036   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0489 (init_dma_0/USER_LOGIC_I/Mmult_n0489_PCOUT_to_Mmult_n04891_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n04891 (init_dma_0/USER_LOGIC_I/Mmult_n04891_PCOUT_to_Mmult_n04892_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n04892 (init_dma_0/USER_LOGIC_I/n0489<17>)
-     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_lut<17>)
-     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<26>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<27>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<28>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<29>)
-     XORCY:CI->O           5   0.320   0.662  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_xor<30> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_255_OUT<30>)
-     LUT4:I0->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_225_o_lut<15> (init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_225_o_lut<15>)
-     MUXCY:S->O           67   0.291   0.573  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_225_o_cy<15> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_in_addr_buff[31]_LessThan_225_o)
+     DSP48E1:A16->PCOUT47    1   4.036   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0570 (init_dma_0/USER_LOGIC_I/Mmult_n0570_PCOUT_to_Mmult_n05701_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n05701 (init_dma_0/USER_LOGIC_I/Mmult_n05701_PCOUT_to_Mmult_n05702_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n05702 (init_dma_0/USER_LOGIC_I/n0570<17>)
+     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_lut<17>)
+     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<26>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<27>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<28>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<29>)
+     XORCY:CI->O           5   0.320   0.662  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_xor<30> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_295_OUT<30>)
+     LUT4:I0->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o_lut<15> (init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o_lut<15>)
+     MUXCY:S->O          133   0.291   0.588  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o_cy<15> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o)
      LUT4:I3->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_lut<0> (init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_lut<0>)
      MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_cy<0> (init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_cy<0>)
      MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_cy<1> (init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_cy<1>)
@@ -1407,122 +1471,89 @@ Delay:               11.923ns (Levels of Logic = 53)
      XORCY:CI->O           1   0.320   0.000  init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma_xor<31> (init_dma_0/USER_LOGIC_I/Mcount_count_irq_dma31)
      FDRE:D                    0.011          init_dma_0/USER_LOGIC_I/count_irq_dma_31
     ----------------------------------------
-    Total                     11.923ns (9.862ns logic, 2.061ns route)
-                                       (82.7% logic, 17.3% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
-  Clock period: 8.378ns (frequency: 119.358MHz)
-  Total number of paths / destination ports: 308152 / 2470
--------------------------------------------------------------------------
-Delay:               8.378ns (Levels of Logic = 12)
-  Source:            init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 (FF)
-  Destination:       init_dma_0/USER_LOGIC_I/up_addr_4 (FF)
-  Source Clock:      S_AXI_ACLK rising
-  Destination Clock: S_AXI_ACLK rising
-
-  Data Path: init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 to init_dma_0/USER_LOGIC_I/up_addr_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             5   0.282   0.766  init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14 (init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_14)
-     LUT6:I0->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>1_F (N142)
-     MUXF7:I0->O           2   0.214   0.745  init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>1 (init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>)
-     LUT6:I0->O           53   0.053   0.570  init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o<31>7 (init_dma_0/USER_LOGIC_I/Bus2IP_RdCE[31]_GND_49_o_equal_43_o)
-     LUT3:I2->O            6   0.053   0.635  init_dma_0/USER_LOGIC_I/Mmux_up_rwce_s311 (init_dma_0/USER_LOGIC_I/up_rwce_s<8>)
-     LUT6:I3->O            8   0.053   0.771  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_7_o<31>1111 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_7_o<31>111)
-     LUT6:I1->O            2   0.053   0.731  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_7_o<31>113 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_7_o<31>11)
-     LUT5:I0->O            3   0.053   0.739  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_7_o<31>14 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_7_o<31>1)
-     LUT6:I1->O            3   0.053   0.739  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_9_o<31>1 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_equal_9_o)
-     LUT5:I0->O            1   0.053   0.739  init_dma_0/USER_LOGIC_I/_n09776 (init_dma_0/USER_LOGIC_I/_n09776)
-     LUT6:I0->O            1   0.053   0.413  init_dma_0/USER_LOGIC_I/_n09777 (init_dma_0/USER_LOGIC_I/_n09777)
-     LUT6:I5->O            5   0.053   0.440  init_dma_0/USER_LOGIC_I/_n09778 (init_dma_0/USER_LOGIC_I/_n0977)
-     LUT6:I5->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_select_38_OUT<5>3 (init_dma_0/USER_LOGIC_I/up_rwce_s[31]_GND_49_o_select_38_OUT<0>)
-     FDC:D                     0.011          init_dma_0/USER_LOGIC_I/up_addr_0
-    ----------------------------------------
-    Total                      8.378ns (1.090ns logic, 7.288ns route)
-                                       (13.0% logic, 87.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'M_AXI_ACLK'
-  Total number of paths / destination ports: 111 / 111
--------------------------------------------------------------------------
-Offset:              0.959ns (Levels of Logic = 1)
-  Source:            M_AXI_ARESETN (PAD)
-  Destination:       init_dma_0/USER_LOGIC_I/count_4m_31 (FF)
-  Destination Clock: M_AXI_ACLK rising
-
-  Data Path: M_AXI_ARESETN to init_dma_0/USER_LOGIC_I/count_4m_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     INV:I->O            102   0.067   0.567  init_dma_0/USER_LOGIC_I/M_AXI_ARESETN_inv1_INV_0 (init_dma_0/USER_LOGIC_I/M_AXI_ARESETN_inv)
-     FDR:R                     0.325          init_dma_0/USER_LOGIC_I/irq_dma_ff
-    ----------------------------------------
-    Total                      0.959ns (0.392ns logic, 0.567ns route)
-                                       (40.9% logic, 59.1% route)
+    Total                     11.938ns (9.862ns logic, 2.076ns route)
+                                       (82.6% logic, 17.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 1982 / 1366
+  Total number of paths / destination ports: 2016 / 1400
 -------------------------------------------------------------------------
 Offset:              1.219ns (Levels of Logic = 2)
   Source:            S_AXI_AWVALID (PAD)
-  Destination:       init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24 (FF)
+  Destination:       init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16 (FF)
   Destination Clock: S_AXI_ACLK rising
 
-  Data Path: S_AXI_AWVALID to init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24
+  Data Path: S_AXI_AWVALID to init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LUT5:I2->O           64   0.053   0.899  init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_start11 (init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start)
-     LUT6:I0->O            1   0.053   0.000  init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[24].MULTIPLE_CES_THIS_CS_GEN.CE_I/Mmux_CS11 (init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<24>)
-     FDRE:D                    0.011          init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_24
+     LUT6:I0->O            1   0.053   0.000  init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[16].MULTIPLE_CES_THIS_CS_GEN.CE_I/Mmux_CS11 (init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<16>)
+     FDRE:D                    0.011          init_dma_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16
     ----------------------------------------
     Total                      1.219ns (0.320ns logic, 0.899ns route)
                                        (26.3% logic, 73.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 4245673 / 69
+Timing constraint: Default OFFSET IN BEFORE for Clock 'M_AXI_ACLK'
+  Total number of paths / destination ports: 335 / 335
 -------------------------------------------------------------------------
-Offset:              9.750ns (Levels of Logic = 20)
-  Source:            init_dma_0/USER_LOGIC_I/up_len_ref_11 (FF)
-  Destination:       M_AXI_WDATA<31> (PAD)
-  Source Clock:      S_AXI_ACLK rising
+Offset:              1.001ns (Levels of Logic = 1)
+  Source:            M_AXI_ARESETN (PAD)
+  Destination:       init_dma_0/USER_LOGIC_I/debug_count_irq_31 (FF)
+  Destination Clock: M_AXI_ACLK rising
 
-  Data Path: init_dma_0/USER_LOGIC_I/up_len_ref_11 to M_AXI_WDATA<31>
+  Data Path: M_AXI_ARESETN to init_dma_0/USER_LOGIC_I/debug_count_irq_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.282   0.432  init_dma_0/USER_LOGIC_I/up_len_ref_11 (init_dma_0/USER_LOGIC_I/up_len_ref_11)
-     DSP48E1:B13->PCOUT47    1   3.851   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0489 (init_dma_0/USER_LOGIC_I/Mmult_n0489_PCOUT_to_Mmult_n04891_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n04891 (init_dma_0/USER_LOGIC_I/Mmult_n04891_PCOUT_to_Mmult_n04892_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n04892 (init_dma_0/USER_LOGIC_I/n0489<17>)
-     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_lut<17>)
-     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<26>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<27>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<28>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<29>)
-     MUXCY:CI->O           0   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<30> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<30>)
-     XORCY:CI->O           5   0.320   0.629  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_xor<31> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_255_OUT<31>)
+     INV:I->O            294   0.067   0.609  init_dma_0/USER_LOGIC_I/M_AXI_ARESETN_inv1_INV_0 (init_dma_0/USER_LOGIC_I/M_AXI_ARESETN_inv)
+     FDR:R                     0.325          init_dma_0/USER_LOGIC_I/irq_dma_ff
+    ----------------------------------------
+    Total                      1.001ns (0.392ns logic, 0.609ns route)
+                                       (39.2% logic, 60.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 4245673 / 69
+-------------------------------------------------------------------------
+Offset:              9.757ns (Levels of Logic = 20)
+  Source:            init_dma_0/USER_LOGIC_I/up_len_ref_14 (FF)
+  Destination:       M_AXI_WDATA<31> (PAD)
+  Source Clock:      S_AXI_ACLK rising
+
+  Data Path: init_dma_0/USER_LOGIC_I/up_len_ref_14 to M_AXI_WDATA<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.282   0.439  init_dma_0/USER_LOGIC_I/up_len_ref_14 (init_dma_0/USER_LOGIC_I/up_len_ref_14)
+     DSP48E1:B16->PCOUT47    1   3.851   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0570 (init_dma_0/USER_LOGIC_I/Mmult_n0570_PCOUT_to_Mmult_n05701_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n05701 (init_dma_0/USER_LOGIC_I/Mmult_n05701_PCOUT_to_Mmult_n05702_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n05702 (init_dma_0/USER_LOGIC_I/n0570<17>)
+     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_lut<17>)
+     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<26>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<27>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<28>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<29>)
+     MUXCY:CI->O           0   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<30> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<30>)
+     XORCY:CI->O           5   0.320   0.629  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_xor<31> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_295_OUT<31>)
      LUT5:I2->O            0   0.053   0.000  init_dma_0/USER_LOGIC_I/wdata<31>1 (M_AXI_WDATA<31>)
     ----------------------------------------
-    Total                      9.750ns (8.276ns logic, 1.474ns route)
-                                       (84.9% logic, 15.1% route)
+    Total                      9.757ns (8.276ns logic, 1.481ns route)
+                                       (84.8% logic, 15.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'M_AXI_ACLK'
-  Total number of paths / destination ports: 4806945 / 46
+  Total number of paths / destination ports: 4806946 / 47
 -------------------------------------------------------------------------
 Offset:              9.916ns (Levels of Logic = 20)
   Source:            init_dma_0/USER_LOGIC_I/count_irq_dma_16 (FF)
@@ -1534,25 +1565,25 @@ Offset:              9.916ns (Levels of Logic = 20)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             3   0.282   0.413  init_dma_0/USER_LOGIC_I/count_irq_dma_16 (init_dma_0/USER_LOGIC_I/count_irq_dma_16)
-     DSP48E1:A16->PCOUT47    1   4.036   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0489 (init_dma_0/USER_LOGIC_I/Mmult_n0489_PCOUT_to_Mmult_n04891_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n04891 (init_dma_0/USER_LOGIC_I/Mmult_n04891_PCOUT_to_Mmult_n04892_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n04892 (init_dma_0/USER_LOGIC_I/n0489<17>)
-     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_lut<17>)
-     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<26>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<27>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<28>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<29>)
-     MUXCY:CI->O           0   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<30> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_cy<30>)
-     XORCY:CI->O           5   0.320   0.629  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_255_OUT_xor<31> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_255_OUT<31>)
+     DSP48E1:A16->PCOUT47    1   4.036   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0570 (init_dma_0/USER_LOGIC_I/Mmult_n0570_PCOUT_to_Mmult_n05701_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n05701 (init_dma_0/USER_LOGIC_I/Mmult_n05701_PCOUT_to_Mmult_n05702_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n05702 (init_dma_0/USER_LOGIC_I/n0570<17>)
+     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_lut<17>)
+     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<26>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<27>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<28>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<29>)
+     MUXCY:CI->O           0   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<30> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_cy<30>)
+     XORCY:CI->O           5   0.320   0.629  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_295_OUT_xor<31> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_295_OUT<31>)
      LUT5:I2->O            0   0.053   0.000  init_dma_0/USER_LOGIC_I/wdata<31>1 (M_AXI_WDATA<31>)
     ----------------------------------------
     Total                      9.916ns (8.461ns logic, 1.455ns route)
@@ -1568,8 +1599,8 @@ Clock to Setup on destination clock M_AXI_ACLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-M_AXI_ACLK     |   11.923|         |         |         |
-S_AXI_ACLK     |   11.757|         |         |         |
+M_AXI_ACLK     |   11.938|         |         |         |
+S_AXI_ACLK     |   11.779|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock S_AXI_ACLK
@@ -1577,22 +1608,22 @@ Clock to Setup on destination clock S_AXI_ACLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-M_AXI_ACLK     |    2.810|         |         |         |
-S_AXI_ACLK     |    8.378|         |         |         |
+M_AXI_ACLK     |    2.697|         |         |         |
+S_AXI_ACLK     |    8.388|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 17.21 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.03 secs
  
 --> 
 
 
-Total memory usage is 543124 kilobytes
+Total memory usage is 544156 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   35 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   36 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

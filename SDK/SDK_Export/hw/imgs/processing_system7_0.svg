@@ -129,14 +129,14 @@
   <text x="60" y="486" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">20</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="40" y="504" xlink:href="#IPD_SPort"/>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="48" y="502" xlink:href="#IPD_PortClk"/>
-  <text x="60" y="510" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">24</text>
+  <text x="60" y="510" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">23</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="40" y="528" xlink:href="#IPD_SPort"/>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="48" y="526" xlink:href="#IPD_PortClk"/>
-  <text x="60" y="534" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">25</text>
+  <text x="60" y="534" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">24</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="40" y="552" xlink:href="#IPD_SPort"/>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" x="48" y="550" xlink:href="#IPD_PortClk"/>
   <text x="60" y="558" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">26</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="40" y="576" xlink:href="#IPD_SPort"/>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" x="48" y="574" xlink:href="#IPD_PortClk"/>
   <text x="60" y="582" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">28</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="24" xlink:href="#IPD_SPort"/>
   <text x="216" y="30" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">10</text>
@@ -145,7 +145,7 @@
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="72" xlink:href="#IPD_SPort"/>
   <text x="216" y="78" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">22</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="96" xlink:href="#IPD_SPort"/>
-  <text x="216" y="102" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">23</text>
+  <text x="216" y="102" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">25</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="228" y="120" xlink:href="#IPD_SPort"/>
   <text x="216" y="126" fill="#000000" stroke="none" font-size="8pt" font-style="normal" font-weight="bold" text-anchor="middle" font-family="Verdana Arial Helvetica san-serif">27</text>
   <use xmlns:xlink="http://www.w3.org/1999/xlink" x="24" y="608" xlink:href="#AXI_busconn_SLAVE"/>

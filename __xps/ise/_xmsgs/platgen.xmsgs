@@ -17,6 +17,9 @@
 <msg type="warning" file="EDK" num="4088" delta="new" >IPNAME: <arg fmt="%s" index="1">axi_dma</arg>, INSTANCE: <arg fmt="%s" index="2">axi_dma_0</arg> - <arg fmt="%s" index="3">Superseded</arg> core for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">/home/vladimir/cf_ad9467_zed/system.mhs line 157</arg> 
 </msg>
 
+<msg type="info" file="EDK" num="4130" delta="new" >IPNAME: <arg fmt="%s" index="1">processing_system7</arg>, INSTANCE:<arg fmt="%s" index="2">processing_system7_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_NUM_F2P_INTR_INPUTS</arg> value to <arg fmt="%s" index="6">1</arg> - <arg fmt="%s" index="7">/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/processing_system7_v3_00_a/data/processing_system7_v2_1_0.mpd line 254</arg> 
+</msg>
+
 <msg type="info" file="EDK" num="4130" delta="new" >IPNAME: <arg fmt="%s" index="1">axi_interconnect</arg>, INSTANCE:<arg fmt="%s" index="2">axi_interconnect_1</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_BASEFAMILY</arg> value to <arg fmt="%s" index="6">zynq</arg> - <arg fmt="%s" index="7">/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_interconnect_v1_06_a/data/axi_interconnect_v2_1_0.mpd line 81</arg> 
 </msg>
 
@@ -56,7 +59,7 @@
 <msg type="info" file="EDK" num="3707" delta="new" >Frequency of the clock port of the interconnect &apos;<arg fmt="%s" index="1">axi_interconnect_2</arg>&apos; could not be determined. Tools are updating the value of the parameter <arg fmt="%s" index="2">C_INTERCONNECT_S_AXI_HP0_IS_ACLK_ASYNC</arg> on core <arg fmt="%s" index="3">processing_system7_0</arg> to &apos;1&apos;. 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">S_AXI_HP0_RACOUNT</arg>, CONNECTOR: <arg fmt="%s" index="2">processing_system7_0_S_AXI_HP0_RACOUNT</arg> - floating connection - <arg fmt="%s" index="3">/home/vladimir/cf_ad9467_zed/system.mhs line 127</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">S_AXI_HP0_RACOUNT</arg>, CONNECTOR: <arg fmt="%s" index="2">processing_system7_0_S_AXI_HP0_RACOUNT</arg> - floating connection - <arg fmt="%s" index="3">/home/vladimir/cf_ad9467_zed/system.mhs line 125</arg> 
 </msg>
 
 <msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">mm2s_prmry_reset_out_n</arg>, CONNECTOR: <arg fmt="%s" index="2">RESET_OUT_N</arg> - floating connection - <arg fmt="%s" index="3">/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_dma_v5_00_a/data/axi_dma_v2_1_0.mpd line 212</arg> 
@@ -75,6 +78,9 @@
 </msg>
 
 <msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">MOSI_T</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_spi_0_MOSI_T</arg> - floating connection - <arg fmt="%s" index="3">/home/vladimir/cf_ad9467_zed/system.mhs line 198</arg> 
+</msg>
+
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">IP2INTC_Irpt</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_spi_0_IP2INTC_Irpt</arg> - floating connection - <arg fmt="%s" index="3">/home/vladimir/cf_ad9467_zed/system.mhs line 196</arg> 
 </msg>
 
 <msg type="info" file="EDK" num="4060" delta="new" >INSTANCE: <arg fmt="%s" index="1">axi_dma_0</arg>, PARAMETER: <arg fmt="%s" index="2">C_S_AXI_LITE_ACLK_FREQ_HZ</arg> - Did not implement clock DRCs for the parameter. Top-level frequency could not be propagated to this IP. Please make sure that you have specified the frequency of the top-level clock port, and that the clocks are properly connected.

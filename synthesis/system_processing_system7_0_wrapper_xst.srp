@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vladimir/cf_ad9467_zed/synthesis/xst_temp_dir/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 
@@ -83,7 +83,7 @@ Parsing module <system_processing_system7_0_wrapper>.
 
 Elaborating module <system_processing_system7_0_wrapper>.
 
-Elaborating module <processing_system7(C_EMIO_GPIO_WIDTH=64,C_INCLUDE_ACP_TRANS_CHECK=0,C_M_AXI_GP0_ID_WIDTH=6,C_M_AXI_GP0_ENABLE_STATIC_REMAP=1,C_M_AXI_GP1_ID_WIDTH=6,C_M_AXI_GP1_ENABLE_STATIC_REMAP=1,C_S_AXI_GP0_ID_WIDTH=6,C_S_AXI_GP1_ID_WIDTH=6,C_S_AXI_ACP_ID_WIDTH=3,C_S_AXI_HP0_ID_WIDTH=1,C_S_AXI_HP0_DATA_WIDTH=64,C_S_AXI_HP1_ID_WIDTH=6,C_S_AXI_HP1_DATA_WIDTH=64,C_S_AXI_HP2_ID_WIDTH=6,C_S_AXI_HP2_DATA_WIDTH=64,C_S_AXI_HP3_ID_WIDTH=6,C_S_AXI_HP3_DATA_WIDTH=64,C_NUM_F2P_INTR_INPUTS=2,C_FCLK_CLK0_BUF="TRUE",C_FCLK_CLK1_BUF="TRUE",C_FCLK_CLK2_BUF="TRUE",C_FCLK_CLK3_BUF="TRUE")>.
+Elaborating module <processing_system7(C_EMIO_GPIO_WIDTH=64,C_INCLUDE_ACP_TRANS_CHECK=0,C_M_AXI_GP0_ID_WIDTH=6,C_M_AXI_GP0_ENABLE_STATIC_REMAP=1,C_M_AXI_GP1_ID_WIDTH=6,C_M_AXI_GP1_ENABLE_STATIC_REMAP=1,C_S_AXI_GP0_ID_WIDTH=6,C_S_AXI_GP1_ID_WIDTH=6,C_S_AXI_ACP_ID_WIDTH=3,C_S_AXI_HP0_ID_WIDTH=1,C_S_AXI_HP0_DATA_WIDTH=64,C_S_AXI_HP1_ID_WIDTH=6,C_S_AXI_HP1_DATA_WIDTH=64,C_S_AXI_HP2_ID_WIDTH=6,C_S_AXI_HP2_DATA_WIDTH=64,C_S_AXI_HP3_ID_WIDTH=6,C_S_AXI_HP3_DATA_WIDTH=64,C_NUM_F2P_INTR_INPUTS=1,C_FCLK_CLK0_BUF="TRUE",C_FCLK_CLK1_BUF="TRUE",C_FCLK_CLK2_BUF="TRUE",C_FCLK_CLK3_BUF="TRUE")>.
 
 Elaborating module <BUFG>.
 
@@ -93,7 +93,7 @@ WARNING:HDLCompiler:189 - "/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/p
 WARNING:HDLCompiler:189 - "/opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/processing_system7_v3_00_a/hdl/verilog/processing_system7.v" Line 2310: Size mismatch in connection of port <SAXIHP2WACOUNT>. Formal port size is 6-bit while actual signal size is 8-bit.
 WARNING:HDLCompiler:189 - "/home/vladimir/cf_ad9467_zed/hdl/system_processing_system7_0_wrapper.v" Line 1792: Size mismatch in connection of port <S_AXI_HP1_WACOUNT>. Formal port size is 8-bit while actual signal size is 6-bit.
 WARNING:HDLCompiler:189 - "/home/vladimir/cf_ad9467_zed/hdl/system_processing_system7_0_wrapper.v" Line 1838: Size mismatch in connection of port <S_AXI_HP2_WACOUNT>. Formal port size is 8-bit while actual signal size is 6-bit.
-WARNING:HDLCompiler:189 - "/home/vladimir/cf_ad9467_zed/hdl/system_processing_system7_0_wrapper.v" Line 1975: Size mismatch in connection of port <IRQ_F2P>. Formal port size is 16-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "/home/vladimir/cf_ad9467_zed/hdl/system_processing_system7_0_wrapper.v" Line 1975: Size mismatch in connection of port <IRQ_F2P>. Formal port size is 16-bit while actual signal size is 1-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -123,7 +123,7 @@ Synthesizing Unit <processing_system7>.
         C_S_AXI_HP2_DATA_WIDTH = 64
         C_S_AXI_HP3_DATA_WIDTH = 64
         C_INCLUDE_ACP_TRANS_CHECK = 0
-        C_NUM_F2P_INTR_INPUTS = 2
+        C_NUM_F2P_INTR_INPUTS = 1
         C_FCLK_CLK0_BUF = "TRUE"
         C_FCLK_CLK1_BUF = "TRUE"
         C_FCLK_CLK2_BUF = "TRUE"
@@ -141,7 +141,7 @@ WARNING:Xst:647 - Input <S_AXI_HP2_ARSIZE<2:2>> is never used. This port will be
 WARNING:Xst:647 - Input <S_AXI_HP2_AWSIZE<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <S_AXI_HP3_ARSIZE<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <S_AXI_HP3_AWSIZE<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <IRQ_F2P<15:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IRQ_F2P<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <ENET0_GMII_TX_EN>.
     Found 1-bit register for signal <ENET0_GMII_TX_ER>.
     Found 1-bit register for signal <ENET0_GMII_COL_i>.
@@ -322,7 +322,7 @@ Slice Logic Distribution:
    Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                        3224
+ Number of IOs:                        3223
  Number of bonded IOBs:                   0  out of    200     0%  
 
 Specific Feature Utilization:
@@ -561,7 +561,7 @@ Offset:              0.681ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 6044 / 3144
+  Total number of paths / destination ports: 6043 / 3143
 -------------------------------------------------------------------------
 Delay:               3.353ns (Levels of Logic = 5)
   Source:            processing_system7_0/PS7_i:MAXIGP0ARID3 (PAD)
@@ -589,13 +589,13 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.93 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.02 secs
  
 --> 
 
 
-Total memory usage is 515060 kilobytes
+Total memory usage is 514800 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   19 (   0 filtered)

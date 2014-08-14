@@ -52,7 +52,8 @@ entity system_init_dma_0_wrapper is
     M_AXI_RRESP : in std_logic_vector(1 downto 0);
     M_AXI_RVALID : in std_logic;
     M_AXI_RREADY : out std_logic;
-    IRQ_DMA : in std_logic
+    IRQ_DMA : in std_logic;
+    IRQ_4M : out std_logic
   );
 end system_init_dma_0_wrapper;
 
@@ -116,7 +117,8 @@ architecture STRUCTURE of system_init_dma_0_wrapper is
       M_AXI_RRESP : in std_logic_vector(1 downto 0);
       M_AXI_RVALID : in std_logic;
       M_AXI_RREADY : out std_logic;
-      IRQ_DMA : in std_logic
+      IRQ_DMA : in std_logic;
+      IRQ_4M : out std_logic
     );
   end component;
 
@@ -180,7 +182,8 @@ begin
       M_AXI_RRESP => M_AXI_RRESP,
       M_AXI_RVALID => M_AXI_RVALID,
       M_AXI_RREADY => M_AXI_RREADY,
-      IRQ_DMA => IRQ_DMA
+      IRQ_DMA => IRQ_DMA,
+      IRQ_4M => IRQ_4M
     );
 
 end architecture STRUCTURE;

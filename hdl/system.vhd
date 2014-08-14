@@ -653,7 +653,7 @@ architecture STRUCTURE of system is
       FCLK_RESET0_N : out std_logic;
       FPGA_IDLE_N : in std_logic;
       DDR_ARB : in std_logic_vector(3 downto 0);
-      IRQ_F2P : in std_logic_vector(1 downto 0);
+      IRQ_F2P : in std_logic_vector(0 to 0);
       Core0_nFIQ : in std_logic;
       Core0_nIRQ : in std_logic;
       Core1_nFIQ : in std_logic;
@@ -1386,7 +1386,8 @@ architecture STRUCTURE of system is
       M_AXI_RRESP : in std_logic_vector(1 downto 0);
       M_AXI_RVALID : in std_logic;
       M_AXI_RREADY : out std_logic;
-      IRQ_DMA : in std_logic
+      IRQ_DMA : in std_logic;
+      IRQ_4M : out std_logic
     );
   end component;
 
@@ -1519,7 +1520,7 @@ architecture STRUCTURE of system is
   signal axi_interconnect_2_S_WREADY : std_logic_vector(0 to 0);
   signal axi_interconnect_2_S_WSTRB : std_logic_vector(7 downto 0);
   signal axi_interconnect_2_S_WVALID : std_logic_vector(0 to 0);
-  signal axi_spi_0_IP2INTC_Irpt : std_logic;
+  signal init_dma_0_IRQ_4M : std_logic_vector(0 to 0);
   signal net_gnd0 : std_logic;
   signal net_gnd1 : std_logic_vector(0 to 0);
   signal net_gnd2 : std_logic_vector(1 downto 0);
@@ -1534,8 +1535,7 @@ architecture STRUCTURE of system is
   signal net_vcc0 : std_logic;
   signal net_vcc4 : std_logic_vector(3 downto 0);
   signal pgassign1 : std_logic_vector(1 downto 0);
-  signal pgassign2 : std_logic_vector(1 downto 0);
-  signal pgassign3 : std_logic_vector(3 downto 0);
+  signal pgassign2 : std_logic_vector(3 downto 0);
   signal processing_system7_0_DDR_WEB : std_logic;
   signal processing_system7_0_FCLK_CLK0 : std_logic_vector(0 to 0);
   signal processing_system7_0_FCLK_CLK1 : std_logic;
@@ -1579,14 +1579,12 @@ begin
   axi_interconnect_1_S_AWCACHE(7 downto 4) <= B"0000";
   axi_interconnect_1_S_AWLEN(15 downto 8) <= B"00000000";
   axi_interconnect_1_S_AWQOS(7 downto 4) <= B"0000";
-  pgassign1(1) <= axi_dma_0_s2mm_introut;
-  pgassign1(0) <= axi_spi_0_IP2INTC_Irpt;
+  pgassign1(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
+  pgassign1(0 downto 0) <= processing_system7_0_FCLK_CLK0(0 to 0);
+  pgassign2(3 downto 3) <= processing_system7_0_FCLK_CLK0(0 to 0);
+  pgassign2(2 downto 2) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign2(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign2(0 downto 0) <= processing_system7_0_FCLK_CLK0(0 to 0);
-  pgassign3(3 downto 3) <= processing_system7_0_FCLK_CLK0(0 to 0);
-  pgassign3(2 downto 2) <= processing_system7_0_FCLK_CLK0(0 to 0);
-  pgassign3(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
-  pgassign3(0 downto 0) <= processing_system7_0_FCLK_CLK0(0 to 0);
   net_gnd0 <= '0';
   net_gnd1(0 to 0) <= B"0";
   net_gnd2(1 downto 0) <= B"00";
@@ -1791,7 +1789,7 @@ begin
       M_AXI_GP0_AWLEN => axi_interconnect_1_S_AWLEN(3 downto 0),
       M_AXI_GP0_AWQOS => axi_interconnect_1_S_AWQOS(3 downto 0),
       M_AXI_GP0_WSTRB => axi_interconnect_1_S_WSTRB(3 downto 0),
-      M_AXI_GP0_ACLK => pgassign2(1),
+      M_AXI_GP0_ACLK => pgassign1(1),
       M_AXI_GP0_ARREADY => axi_interconnect_1_S_ARREADY(0),
       M_AXI_GP0_AWREADY => axi_interconnect_1_S_AWREADY(0),
       M_AXI_GP0_BVALID => axi_interconnect_1_S_BVALID(0),
@@ -1981,7 +1979,7 @@ begin
       S_AXI_HP0_WCOUNT => open,
       S_AXI_HP0_RACOUNT => open,
       S_AXI_HP0_WACOUNT => open,
-      S_AXI_HP0_ACLK => pgassign2(1),
+      S_AXI_HP0_ACLK => pgassign1(1),
       S_AXI_HP0_ARVALID => axi_interconnect_2_M_ARVALID(0),
       S_AXI_HP0_AWVALID => axi_interconnect_2_M_AWVALID(0),
       S_AXI_HP0_BREADY => axi_interconnect_2_M_BREADY(0),
@@ -2073,7 +2071,7 @@ begin
       S_AXI_HP2_WCOUNT => open,
       S_AXI_HP2_RACOUNT => open,
       S_AXI_HP2_WACOUNT => open,
-      S_AXI_HP2_ACLK => pgassign2(1),
+      S_AXI_HP2_ACLK => pgassign1(1),
       S_AXI_HP2_ARVALID => net_gnd0,
       S_AXI_HP2_AWVALID => net_gnd0,
       S_AXI_HP2_BREADY => net_gnd0,
@@ -2209,7 +2207,7 @@ begin
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
       FPGA_IDLE_N => net_gnd0,
       DDR_ARB => net_gnd4,
-      IRQ_F2P => pgassign1,
+      IRQ_F2P => init_dma_0_IRQ_4M(0 to 0),
       Core0_nFIQ => net_gnd0,
       Core0_nIRQ => net_gnd0,
       Core1_nFIQ => net_gnd0,
@@ -2287,13 +2285,13 @@ begin
       adc_dbg_trigger => open,
       adc_mon_valid => open,
       adc_mon_data => open,
-      S_AXIS_S2MM_CLK => pgassign2(1),
+      S_AXIS_S2MM_CLK => pgassign1(1),
       S_AXIS_S2MM_TVALID => axi_dma_0_S_AXIS_S2MM_TVALID,
       S_AXIS_S2MM_TDATA => axi_dma_0_S_AXIS_S2MM_TDATA,
       S_AXIS_S2MM_TKEEP => axi_dma_0_S_AXIS_S2MM_TKEEP,
       S_AXIS_S2MM_TLAST => axi_dma_0_S_AXIS_S2MM_TLAST,
       S_AXIS_S2MM_TREADY => axi_dma_0_S_AXIS_S2MM_TREADY,
-      S_AXI_ACLK => pgassign2(1),
+      S_AXI_ACLK => pgassign1(1),
       S_AXI_ARESETN => axi_interconnect_1_M_ARESETN(0),
       S_AXI_AWADDR => axi_interconnect_1_M_AWADDR(31 downto 0),
       S_AXI_AWVALID => axi_interconnect_1_M_AWVALID(0),
@@ -2316,12 +2314,12 @@ begin
 
   axi_interconnect_1 : system_axi_interconnect_1_wrapper
     port map (
-      INTERCONNECT_ACLK => pgassign2(1),
+      INTERCONNECT_ACLK => pgassign1(1),
       INTERCONNECT_ARESETN => processing_system7_0_FCLK_RESET0_N,
       S_AXI_ARESET_OUT_N => axi_interconnect_1_S_ARESETN,
       M_AXI_ARESET_OUT_N => axi_interconnect_1_M_ARESETN,
       IRQ => open,
-      S_AXI_ACLK => pgassign2,
+      S_AXI_ACLK => pgassign1,
       S_AXI_AWID => axi_interconnect_1_S_AWID,
       S_AXI_AWADDR => axi_interconnect_1_S_AWADDR,
       S_AXI_AWLEN => axi_interconnect_1_S_AWLEN,
@@ -2365,7 +2363,7 @@ begin
       S_AXI_RUSER => open,
       S_AXI_RVALID => axi_interconnect_1_S_RVALID,
       S_AXI_RREADY => axi_interconnect_1_S_RREADY,
-      M_AXI_ACLK => pgassign3,
+      M_AXI_ACLK => pgassign2,
       M_AXI_AWID => open,
       M_AXI_AWADDR => axi_interconnect_1_M_AWADDR,
       M_AXI_AWLEN => open,
@@ -2524,10 +2522,10 @@ begin
 
   axi_dma_0 : system_axi_dma_0_wrapper
     port map (
-      s_axi_lite_aclk => pgassign2(1),
-      m_axi_sg_aclk => pgassign2(1),
+      s_axi_lite_aclk => pgassign1(1),
+      m_axi_sg_aclk => pgassign1(1),
       m_axi_mm2s_aclk => net_gnd0,
-      m_axi_s2mm_aclk => pgassign2(1),
+      m_axi_s2mm_aclk => pgassign1(1),
       axi_resetn => axi_interconnect_1_M_ARESETN(1),
       s_axi_lite_awvalid => axi_interconnect_1_M_AWVALID(1),
       s_axi_lite_awready => axi_interconnect_1_M_AWREADY(1),
@@ -2633,12 +2631,12 @@ begin
 
   axi_interconnect_2 : system_axi_interconnect_2_wrapper
     port map (
-      INTERCONNECT_ACLK => pgassign2(1),
+      INTERCONNECT_ACLK => pgassign1(1),
       INTERCONNECT_ARESETN => processing_system7_0_FCLK_RESET0_N,
       S_AXI_ARESET_OUT_N => open,
       M_AXI_ARESET_OUT_N => open,
       IRQ => open,
-      S_AXI_ACLK => pgassign2(1 downto 1),
+      S_AXI_ACLK => pgassign1(1 downto 1),
       S_AXI_AWID => net_gnd1(0 to 0),
       S_AXI_AWADDR => axi_interconnect_2_S_AWADDR,
       S_AXI_AWLEN => axi_interconnect_2_S_AWLEN,
@@ -2682,7 +2680,7 @@ begin
       S_AXI_RUSER => open,
       S_AXI_RVALID => open,
       S_AXI_RREADY => net_gnd1(0 to 0),
-      M_AXI_ACLK => pgassign2(1 downto 1),
+      M_AXI_ACLK => pgassign1(1 downto 1),
       M_AXI_AWID => axi_interconnect_2_M_AWID(0 to 0),
       M_AXI_AWADDR => axi_interconnect_2_M_AWADDR,
       M_AXI_AWLEN => axi_interconnect_2_M_AWLEN,
@@ -2841,7 +2839,7 @@ begin
 
   axi_spi_0 : system_axi_spi_0_wrapper
     port map (
-      S_AXI_ACLK => pgassign2(1),
+      S_AXI_ACLK => pgassign1(1),
       S_AXI_ARESETN => axi_interconnect_1_M_ARESETN(2),
       S_AXI_AWADDR => axi_interconnect_1_M_AWADDR(95 downto 64),
       S_AXI_AWVALID => axi_interconnect_1_M_AWVALID(2),
@@ -2873,12 +2871,12 @@ begin
       SS_I => net_gnd2,
       SS_O => x_csn,
       SS_T => open,
-      IP2INTC_Irpt => axi_spi_0_IP2INTC_Irpt
+      IP2INTC_Irpt => open
     );
 
   util_spi_3w_0 : system_util_spi_3w_0_wrapper
     port map (
-      m_clk => pgassign2(1),
+      m_clk => pgassign1(1),
       x_csn => x_csn,
       x_clk => x_clk,
       x_mosi => x_mosi,
@@ -2895,7 +2893,7 @@ begin
 
   init_dma_0 : system_init_dma_0_wrapper
     port map (
-      S_AXI_ACLK => pgassign2(1),
+      S_AXI_ACLK => pgassign1(1),
       S_AXI_ARESETN => axi_interconnect_1_M_ARESETN(3),
       S_AXI_AWADDR => axi_interconnect_1_M_AWADDR(127 downto 96),
       S_AXI_AWVALID => axi_interconnect_1_M_AWVALID(3),
@@ -2914,7 +2912,7 @@ begin
       S_AXI_BRESP => axi_interconnect_1_M_BRESP(7 downto 6),
       S_AXI_BVALID => axi_interconnect_1_M_BVALID(3),
       S_AXI_AWREADY => axi_interconnect_1_M_AWREADY(3),
-      M_AXI_ACLK => pgassign2(1),
+      M_AXI_ACLK => pgassign1(1),
       M_AXI_ARESETN => axi_interconnect_1_S_ARESETN(1),
       M_AXI_AWADDR => axi_interconnect_1_S_AWADDR(63 downto 32),
       M_AXI_AWPROT => axi_interconnect_1_S_AWPROT(5 downto 3),
@@ -2935,7 +2933,8 @@ begin
       M_AXI_RRESP => axi_interconnect_1_S_RRESP(3 downto 2),
       M_AXI_RVALID => axi_interconnect_1_S_RVALID(1),
       M_AXI_RREADY => axi_interconnect_1_S_RREADY(1),
-      IRQ_DMA => axi_dma_0_s2mm_introut
+      IRQ_DMA => axi_dma_0_s2mm_introut,
+      IRQ_4M => init_dma_0_IRQ_4M(0)
     );
 
   iobuf_0 : IOBUF

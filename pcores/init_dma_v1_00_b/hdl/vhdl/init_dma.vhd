@@ -163,6 +163,7 @@ entity init_dma is
     M_AXI_RVALID : in  std_logic;
     M_AXI_RREADY : out std_logic;
 	 IRQ_DMA: in std_logic;
+	 IRQ_4M: out std_logic;
 	 
 	 
 	 
@@ -304,7 +305,7 @@ architecture IMP of init_dma is
     M_AXI_RVALID : in  std_logic;
     M_AXI_RREADY : out std_logic;
 	 IRQ_DMA: in std_logic;
-	 
+	 IRQ_4M: out std_logic;
 
 	 
       -- ADD USER PORTS ABOVE THIS LINE ------------------
@@ -418,6 +419,7 @@ begin
     M_AXI_RVALID => M_AXI_RVALID,
     M_AXI_RREADY => M_AXI_RREADY,
 	 IRQ_DMA => IRQ_DMA,
+	 IRQ_4M => IRQ_4M,
 
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

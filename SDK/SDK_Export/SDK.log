@@ -278,3 +278,108 @@
 14:05:24.130 INFO  - Specified output file already exists 
 14:05:25.160 INFO  - Invoking Bootgen:  
 14:05:25.679 INFO  - Bootgen command execution is done. 
+15:32:14.738 INFO  - Project cf_ad9467_zed_hw_platform's source hardware specification located at /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+15:33:08.736 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml into /cf_ad9467_zed_hw_platform/system.xml. 
+15:33:08.741 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.bit into /cf_ad9467_zed_hw_platform/system.bit. 
+15:33:08.745 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.c into /cf_ad9467_zed_hw_platform/ps7_init.c. 
+15:33:08.745 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.h into /cf_ad9467_zed_hw_platform/ps7_init.h. 
+15:33:08.747 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.html into /cf_ad9467_zed_hw_platform/ps7_init.html. 
+15:33:08.748 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.tcl into /cf_ad9467_zed_hw_platform/ps7_init.tcl. 
+15:33:08.925 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+15:33:25.693 INFO  - Updating hardware inferred compiler options for fsbl. 
+15:33:25.708 INFO  - Clearing existing target manager status. 
+15:33:26.984 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.c into /fsbl/src/ps7_init.c. 
+15:33:26.992 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.h into /fsbl/src/ps7_init.h. 
+15:33:26.996 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.html into /fsbl/src/ps7_init.html. 
+15:33:27.000 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.tcl into /fsbl/src/ps7_init.tcl. 
+15:35:10.494 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:35:19.908 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+15:37:35.316 INFO  - Specified output file already exists 
+15:37:36.465 INFO  - Invoking Bootgen:  
+15:37:36.993 INFO  - Bootgen command execution is done. 
+16:36:25.309 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+16:36:25.506 INFO  - The hardware specification for project 'cf_ad9467_zed_hw_platform' is different from /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+16:36:25.892 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml into /cf_ad9467_zed_hw_platform/system.xml. 
+16:36:25.898 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.bit into /cf_ad9467_zed_hw_platform/system.bit. 
+16:36:25.902 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.c into /cf_ad9467_zed_hw_platform/ps7_init.c. 
+16:36:25.902 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.h into /cf_ad9467_zed_hw_platform/ps7_init.h. 
+16:36:25.904 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.html into /cf_ad9467_zed_hw_platform/ps7_init.html. 
+16:36:25.904 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.tcl into /cf_ad9467_zed_hw_platform/ps7_init.tcl. 
+16:36:26.083 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+16:36:30.259 INFO  - Updating hardware inferred compiler options for fsbl. 
+16:36:30.304 INFO  - Clearing existing target manager status. 
+16:36:44.217 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.c into /fsbl/src/ps7_init.c. 
+16:36:44.218 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.h into /fsbl/src/ps7_init.h. 
+16:36:44.239 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.html into /fsbl/src/ps7_init.html. 
+16:36:44.240 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.tcl into /fsbl/src/ps7_init.tcl. 
+16:36:52.394 INFO  - Specified output file already exists 
+16:36:53.202 INFO  - Invoking Bootgen:  
+16:36:53.726 INFO  - Bootgen command execution is done. 
+16:36:59.295 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:29:30.506 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+17:29:30.748 INFO  - The hardware specification for project 'cf_ad9467_zed_hw_platform' is different from /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+17:29:31.126 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml into /cf_ad9467_zed_hw_platform/system.xml. 
+17:29:31.132 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.bit into /cf_ad9467_zed_hw_platform/system.bit. 
+17:29:31.136 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.c into /cf_ad9467_zed_hw_platform/ps7_init.c. 
+17:29:31.137 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.h into /cf_ad9467_zed_hw_platform/ps7_init.h. 
+17:29:31.138 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.html into /cf_ad9467_zed_hw_platform/ps7_init.html. 
+17:29:31.139 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.tcl into /cf_ad9467_zed_hw_platform/ps7_init.tcl. 
+17:29:31.468 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+17:29:35.475 INFO  - Updating hardware inferred compiler options for fsbl. 
+17:29:35.530 INFO  - Clearing existing target manager status. 
+17:29:49.560 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.c into /fsbl/src/ps7_init.c. 
+17:29:49.562 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.h into /fsbl/src/ps7_init.h. 
+17:29:49.576 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.html into /fsbl/src/ps7_init.html. 
+17:29:49.577 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.tcl into /fsbl/src/ps7_init.tcl. 
+17:29:57.572 INFO  - Specified output file already exists 
+17:29:58.427 INFO  - Invoking Bootgen:  
+17:29:58.955 INFO  - Bootgen command execution is done. 
+17:30:05.192 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:43:03.279 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+09:43:03.472 INFO  - The hardware specification for project 'cf_ad9467_zed_hw_platform' is different from /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+09:43:03.724 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml into /cf_ad9467_zed_hw_platform/system.xml. 
+09:43:03.730 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.bit into /cf_ad9467_zed_hw_platform/system.bit. 
+09:43:03.733 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.c into /cf_ad9467_zed_hw_platform/ps7_init.c. 
+09:43:03.734 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.h into /cf_ad9467_zed_hw_platform/ps7_init.h. 
+09:43:03.735 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.html into /cf_ad9467_zed_hw_platform/ps7_init.html. 
+09:43:03.736 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/ps7_init.tcl into /cf_ad9467_zed_hw_platform/ps7_init.tcl. 
+09:43:04.048 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:43:08.093 INFO  - Updating hardware inferred compiler options for fsbl. 
+09:43:08.128 INFO  - Clearing existing target manager status. 
+09:43:21.650 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.c into /fsbl/src/ps7_init.c. 
+09:43:21.653 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.h into /fsbl/src/ps7_init.h. 
+09:43:21.671 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.html into /fsbl/src/ps7_init.html. 
+09:43:21.673 INFO  - Copied contents of /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/cf_ad9467_zed_hw_platform/ps7_init.tcl into /fsbl/src/ps7_init.tcl. 
+09:43:30.033 INFO  - Specified output file already exists 
+09:43:31.206 INFO  - Invoking Bootgen:  
+09:43:31.734 INFO  - Bootgen command execution is done. 
+11:13:36.714 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:13:51.183 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+11:14:04.553 INFO  - Specified output file already exists 
+11:14:05.559 INFO  - Invoking Bootgen:  
+11:14:06.098 INFO  - Bootgen command execution is done. 
+13:36:10.464 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+13:36:23.263 INFO  - Specified output file already exists 
+13:36:24.507 INFO  - Invoking Bootgen:  
+13:36:25.041 INFO  - Bootgen command execution is done. 
+15:13:33.315 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+15:13:46.831 INFO  - Specified output file already exists 
+15:13:47.824 INFO  - Invoking Bootgen:  
+15:13:48.386 INFO  - Bootgen command execution is done. 
+16:02:20.940 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+16:02:31.294 INFO  - Specified output file already exists 
+16:02:32.108 INFO  - Invoking Bootgen:  
+16:02:32.636 INFO  - Bootgen command execution is done. 
+08:57:00.178 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+08:57:15.702 INFO  - Specified output file already exists 
+08:57:16.905 INFO  - Invoking Bootgen:  
+08:57:17.420 INFO  - Bootgen command execution is done. 
+10:30:51.742 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+10:31:00.151 INFO  - Specified output file already exists 
+10:31:01.239 INFO  - Invoking Bootgen:  
+10:31:01.774 INFO  - Bootgen command execution is done. 
+12:37:26.940 INFO  - Processing command line option -hwspec /home/vladimir/cf_ad9467_zed/SDK/SDK_Export/hw/system.xml. 
+12:51:17.308 INFO  - Specified output file already exists 
+12:51:18.294 INFO  - Invoking Bootgen:  
+12:51:18.826 INFO  - Bootgen command execution is done. 

@@ -20,6 +20,10 @@ WARNING:EDK:4088 - IPNAME: axi_dma, INSTANCE: axi_dma_0 - Superseded core for
    architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 157 
 
 Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_NUM_F2P_INTR_INPUTS value to 1 -
+   /opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/processing_system7
+   _v3_00_a/data/processing_system7_v2_1_0.mpd line 254 
 INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
    overriding PARAMETER C_BASEFAMILY value to zynq -
    /opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_interconnect_v
@@ -93,7 +97,7 @@ slave(s)
 Checking port drivers...
 WARNING:EDK:4181 - PORT: S_AXI_HP0_RACOUNT, CONNECTOR:
    processing_system7_0_S_AXI_HP0_RACOUNT - floating connection -
-   /home/vladimir/cf_ad9467_zed/system.mhs line 127 
+   /home/vladimir/cf_ad9467_zed/system.mhs line 125 
 WARNING:EDK:4181 - PORT: mm2s_prmry_reset_out_n, CONNECTOR: RESET_OUT_N -
    floating connection -
    /opt/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_dma_v5_00_a/da
@@ -114,6 +118,8 @@ WARNING:EDK:4181 - PORT: MISO_T, CONNECTOR: axi_spi_0_MISO_T - floating
    connection - /home/vladimir/cf_ad9467_zed/system.mhs line 197 
 WARNING:EDK:4181 - PORT: MOSI_T, CONNECTOR: axi_spi_0_MOSI_T - floating
    connection - /home/vladimir/cf_ad9467_zed/system.mhs line 198 
+WARNING:EDK:4181 - PORT: IP2INTC_Irpt, CONNECTOR: axi_spi_0_IP2INTC_Irpt -
+   floating connection - /home/vladimir/cf_ad9467_zed/system.mhs line 196 
 
 Performing Clock DRCs...
 INFO:EDK:4060 - INSTANCE: axi_dma_0, PARAMETER: C_S_AXI_LITE_ACLK_FREQ_HZ - Did
@@ -206,7 +212,7 @@ Elaborating instances ...
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -252,4 +258,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 902.00 seconds
+Total run time: 910.00 seconds
