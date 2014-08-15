@@ -1,4 +1,4 @@
-09:43:08 **** Auto Build of project fsbl_bsp ****
+14:48:22 **** Build of project fsbl_bsp ****
 make -k all 
 libgen -hw ../cf_ad9467_zed_hw_platform/system.xml\
 	       -lp /home/vladimir/cf_ad9467_zed\
@@ -46,5 +46,5 @@ Compiling cpu_cortexa9
 Running execs_generate.
 Finished building libraries
 
-09:43:21 Build Finished (took 13s.347ms)
+14:48:36 Build Finished (took 14s.39ms)
 

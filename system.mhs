@@ -33,6 +33,8 @@
  PORT spi_cs1n = spi_cs1n, DIR = O
  PORT spi_clk = spi_clk, DIR = O
  PORT spi_sdio = spi_sdio, DIR = IO
+ PORT init_dma_0_STR_LSR_pin = init_dma_0_STR_LSR, DIR = O
+ PORT init_dma_0_IRQ_4M_pin = init_dma_0_IRQ_4M, DIR = O, SIGIS = INTERRUPT, SENSITIVITY = LEVEL_HIGH
 
 
 BEGIN processing_system7
@@ -223,5 +225,6 @@ BEGIN init_dma
  PORT M_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT IRQ_DMA = axi_dma_0_s2mm_introut
  PORT IRQ_4M = init_dma_0_IRQ_4M
+ PORT STR_LSR = init_dma_0_STR_LSR
 END
 

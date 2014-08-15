@@ -4434,8 +4434,8 @@ s_axi_lite_aclk|    2.650|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 166.00 secs
-Total CPU time to Xst completion: 122.82 secs
+Total REAL time to Xst completion: 170.00 secs
+Total CPU time to Xst completion: 127.60 secs
  
 --> 
 

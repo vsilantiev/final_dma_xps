@@ -31,7 +31,8 @@ module vova_init (
   M_AXI_RVALID,
   M_AXI_RREADY,
   IRQ_DMA,
-  IRQ_4M
+  IRQ_4M,
+  STR_LSR
 );
   // Parameter Master and Slave
   parameter integer C_M_AXI_ADDR_WIDTH = 32;
@@ -93,6 +94,7 @@ module vova_init (
   reg [31:0] in_addr_buff;
   input wire IRQ_DMA;
   output wire IRQ_4M;
+  output wire STR_LSR;
   reg [31:0] count_irq_dma;
   reg [2:0] write_index;
 
@@ -463,21 +465,20 @@ module vova_init (
 	
 	
 reg [31:0] pe;
-wire go;
   always @(posedge M_AXI_ACLK) begin                                                                        
-    if (M_AXI_ARESETN == 0) begin                                                                    
+    if (M_AXI_ARESETN == 0)// begin                                                                    
       pe <= 1'b1;                                                                                                      
-    end else if ( up_per == 0 || up_per < up_len_ref ) begin // Похоже если период 0
+    //end 
+	 else if ( up_per == 0 || up_per < up_len_ref ) //begin// Похоже если период 0
 	   pe <= 1'b1;
-	 end else begin
-      pe <= pe + 1;                                                                 
-    end 
-    if (pe == (up_per+1)) begin
+	 else
+      pe <= pe + 1;
+	 //end
+    if (pe == (up_per+1))
 		pe <= 0;
-    end
   end
   // если pe=up_per+1 (1) если pe!=up_per+1 (0)
-  assign go = (pe == (up_per+1))? 1'b1 : 1'b0;
+  assign STR_LSR = (pe == (up_per+1))? 1'b1 : 1'b0;
 	
   reg [31:0] count_4m;
   
@@ -500,7 +501,7 @@ wire go;
 	     if (r_next_addr == 1) 	
 		    count_f2 <= count_f2 + 1; //не разу 
 		r_next_addr <= 0;	
-    end else if ((in_addr_buff + (up_len_ref*4)*count_irq_dma) >= (in_addr_buff + 32'h400000)) begin//Конец 4M нужен новый вектор
+    end else if (in_addr_buff + ((up_len_ref*4)*(count_irq_dma+1)) > (in_addr_buff + 32'h400000)) begin//Конец 4M нужен новый вектор
 		count_4m <= count_4m+1;//Debug
 		count_irq_dma <= 0;
 		if (r_next_addr == 0)
@@ -519,27 +520,28 @@ wire go;
 
 
 
-  reg irq_4m; // Сигнал прерывание
+  reg [63:0] irq_4m; // Сигнал прерывание
   reg [31:0] debug_count_irq;
-  reg [5:0] len_irq;
+  //reg [5:0] len_irq;
   
   always @(posedge M_AXI_ACLK) begin                                                                           
     if (M_AXI_ARESETN == 0) begin                                                                    
 		pre_addr_buff <= 0;
 		debug_count_irq <= 0;
 		irq_4m <= 0;
-		len_irq <= 0;
+		//len_irq <= 0;
     end else begin
 		if ((rs_next_addr == 1) && (in_addr_buff != 0)) begin                                                                     
 		  pre_addr_buff <= in_addr_buff;
-        irq_4m <= 32'hFFFFFFFF; //Надо выдать прерывание для Анатолия здесь
+        irq_4m <= 64'hFFFFFFFFFFFFFFFF; //Надо выдать прерывание для Анатолия здесь
+		  //len_irq <= len_irq + 1;
 		end
-		if (irq_4m != 0 && len_irq != 0) begin
+		if (/*len_irq != 0*/irq_4m != 0) begin
 		  debug_count_irq <= debug_count_irq + 1;
-		  len_irq <= len_irq + 1;
-		  irq_4m <= 1;
-		end else
-		  irq_4m <= 0;
+		  //len_irq <= len_irq + 1;
+		  irq_4m <= irq_4m >> 1;
+		end //else
+		  //irq_4m <= 0;
     end
   end
 
@@ -607,7 +609,7 @@ parameter C_NUM_COMMANDS = 6;
     if (M_AXI_ARESETN == 0 || irq_dma_pulse) begin
 	   push_write <= 1'b0;
 	   write_index <= 0;
-	 end else if ((up_len_ref != 0) && (in_addr_buff != 0) && (go)) begin
+	 end else if ((up_len_ref != 0) && (in_addr_buff != 0) && (STR_LSR)) begin
 	   if (~up_len_ref[0]) begin
 		  if (~awvalid && ~wvalid && ~last_write && ~push_write) begin
 		    push_write <= 1'b1;

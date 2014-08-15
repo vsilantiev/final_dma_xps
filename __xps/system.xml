@@ -1,4 +1,5 @@
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Tue Aug 12 16:04:45 2014">
+
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Thu Aug 14 14:03:07 2014">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="/home/vladimir/cf_ad9467_zed/system.xmp" SPEEDGRADE="-1"/>
 
@@ -341,10 +342,6 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="28" MPD_INDEX="606" NAME="IRQ_F2P" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="init_dma_0_IRQ_4M" VECFORMULA="[(C_NUM_F2P_INTR_INPUTS-1) :0]">
-          <SIGNALS>
-            <SIGNAL NAME="axi_dma_0_s2mm_introut"/>
-            <SIGNAL NAME="axi_spi_0_IP2INTC_Irpt"/>
-          </SIGNALS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="init_dma_0" PORT="IRQ_4M"/>
           </CONNECTIONS>
@@ -5571,6 +5568,7 @@
         </PORT>
         <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="41" NAME="IRQ_4M" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="init_dma_0_IRQ_4M">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="init_dma_0_IRQ_4M_pin"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="IRQ_F2P"/>
           </CONNECTIONS>
         </PORT>
@@ -5762,6 +5760,11 @@
         <PORT BUS="M_AXI" DEF_SIGNAME="axi_interconnect_1_S_RREADY" DIR="O" MPD_INDEX="39" NAME="M_AXI_RREADY" SIGNAME="axi_interconnect_1_S_RREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_1" PORT="S_AXI_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MPD_INDEX="42" NAME="STR_LSR" SIGNAME="init_dma_0_STR_LSR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="init_dma_0_STR_LSR_pin"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5980,6 +5983,16 @@
     <PORT DIR="IO" MHS_INDEX="30" NAME="spi_sdio" SIGNAME="spi_sdio">
       <CONNECTIONS>
         <CONNECTION INSTANCE="util_spi_3w_0" PORT="spi_sdio"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" MHS_INDEX="31" NAME="init_dma_0_STR_LSR_pin" SIGNAME="init_dma_0_STR_LSR">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="init_dma_0" PORT="STR_LSR"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" MHS_INDEX="32" NAME="init_dma_0_IRQ_4M_pin" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="init_dma_0_IRQ_4M">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="init_dma_0" PORT="IRQ_4M"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>

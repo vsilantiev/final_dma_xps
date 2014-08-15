@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Aug 14 12:11:52 2014
+// Written by: Map P.20131013 on Fri Aug 15 12:45:17 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -105,6 +105,7 @@ COMP "processing_system7_0_DDR_DQ<18>" LOCATE = SITE "N3" LEVEL 1;
 COMP "processing_system7_0_DDR_DQ<17>" LOCATE = SITE "T3" LEVEL 1;
 COMP "processing_system7_0_DDR_DQ<16>" LOCATE = SITE "M1" LEVEL 1;
 COMP "processing_system7_0_DDR_DQ<15>" LOCATE = SITE "K3" LEVEL 1;
+COMP "init_dma_0_STR_LSR_pin" LOCATE = SITE "Y11" LEVEL 1;
 COMP "processing_system7_0_DDR_DQ<19>" LOCATE = SITE "T1" LEVEL 1;
 COMP "spi_clk" LOCATE = SITE "A22" LEVEL 1;
 COMP "processing_system7_0_DDR_Addr<13>" LOCATE = SITE "F4" LEVEL 1;
@@ -117,6 +118,7 @@ COMP "processing_system7_0_MIO<26>" LOCATE = SITE "A13" LEVEL 1;
 COMP "processing_system7_0_MIO<25>" LOCATE = SITE "F12" LEVEL 1;
 COMP "processing_system7_0_MIO<28>" LOCATE = SITE "A12" LEVEL 1;
 COMP "processing_system7_0_MIO<27>" LOCATE = SITE "D7" LEVEL 1;
+COMP "init_dma_0_IRQ_4M_pin" LOCATE = SITE "T22" LEVEL 1;
 COMP "processing_system7_0_MIO<29>" LOCATE = SITE "E8" LEVEL 1;
 COMP "processing_system7_0_MIO<20>" LOCATE = SITE "A8" LEVEL 1;
 COMP "processing_system7_0_MIO<22>" LOCATE = SITE "A14" LEVEL 1;

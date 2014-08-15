@@ -39,7 +39,9 @@ entity system is
     spi_cs0n : out std_logic;
     spi_cs1n : out std_logic;
     spi_clk : out std_logic;
-    spi_sdio : inout std_logic
+    spi_sdio : inout std_logic;
+    init_dma_0_STR_LSR_pin : out std_logic;
+    init_dma_0_IRQ_4M_pin : out std_logic
   );
 end system;
 
@@ -1387,7 +1389,8 @@ architecture STRUCTURE of system is
       M_AXI_RVALID : in std_logic;
       M_AXI_RREADY : out std_logic;
       IRQ_DMA : in std_logic;
-      IRQ_4M : out std_logic
+      IRQ_4M : out std_logic;
+      STR_LSR : out std_logic
     );
   end component;
 
@@ -1521,6 +1524,7 @@ architecture STRUCTURE of system is
   signal axi_interconnect_2_S_WSTRB : std_logic_vector(7 downto 0);
   signal axi_interconnect_2_S_WVALID : std_logic_vector(0 to 0);
   signal init_dma_0_IRQ_4M : std_logic_vector(0 to 0);
+  signal init_dma_0_STR_LSR : std_logic;
   signal net_gnd0 : std_logic;
   signal net_gnd1 : std_logic_vector(0 to 0);
   signal net_gnd2 : std_logic_vector(1 downto 0);
@@ -1563,6 +1567,8 @@ begin
   -- Internal assignments
 
   processing_system7_0_DDR_WEB_pin <= processing_system7_0_DDR_WEB;
+  init_dma_0_STR_LSR_pin <= init_dma_0_STR_LSR;
+  init_dma_0_IRQ_4M_pin <= init_dma_0_IRQ_4M(0);
   axi_interconnect_1_S_WLAST(1 downto 1) <= B"0";
   axi_interconnect_1_S_ARID(13 downto 7) <= B"0000000";
   axi_interconnect_1_S_AWID(13 downto 7) <= B"0000000";
@@ -2934,7 +2940,8 @@ begin
       M_AXI_RVALID => axi_interconnect_1_S_RVALID(1),
       M_AXI_RREADY => axi_interconnect_1_S_RREADY(1),
       IRQ_DMA => axi_dma_0_s2mm_introut,
-      IRQ_4M => init_dma_0_IRQ_4M(0)
+      IRQ_4M => init_dma_0_IRQ_4M(0),
+      STR_LSR => init_dma_0_STR_LSR
     );
 
   iobuf_0 : IOBUF

@@ -1,13 +1,13 @@
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Superseded core for architecture 'zynq' -
-   /home/vladimir/cf_ad9467_zed/system.mhs line 38 
+   /home/vladimir/cf_ad9467_zed/system.mhs line 40 
 WARNING:EDK:4088 - IPNAME: axi_dma, INSTANCE: axi_dma_0 - Superseded core for
-   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 157 
+   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 159 
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Superseded core for architecture 'zynq' -
-   /home/vladimir/cf_ad9467_zed/system.mhs line 38 
+   /home/vladimir/cf_ad9467_zed/system.mhs line 40 
 WARNING:EDK:4088 - IPNAME: axi_dma, INSTANCE: axi_dma_0 - Superseded core for
-   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 157 
+   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 159 
 WARNING:EDK:1954 - No Top-level Input clock for the design. 
 WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Frequency of the interconnect's clock port could not be determined. All IPs
@@ -23,14 +23,14 @@ WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_2 -
    connected to.
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Superseded core for architecture 'zynq' -
-   /home/vladimir/cf_ad9467_zed/system.mhs line 38 
+   /home/vladimir/cf_ad9467_zed/system.mhs line 40 
 WARNING:EDK:4088 - IPNAME: axi_dma, INSTANCE: axi_dma_0 - Superseded core for
-   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 157 
+   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 159 
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Superseded core for architecture 'zynq' -
-   /home/vladimir/cf_ad9467_zed/system.mhs line 38 
+   /home/vladimir/cf_ad9467_zed/system.mhs line 40 
 WARNING:EDK:4088 - IPNAME: axi_dma, INSTANCE: axi_dma_0 - Superseded core for
-   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 157 
+   architecture 'zynq' - /home/vladimir/cf_ad9467_zed/system.mhs line 159 
 WARNING:EDK -
    /opt/Xilinx/14.7/ISE_DS/ISE/data/zynqconfig/ps7_internals/pcores/ps7_i2c_v1_0
    0_a/data/ps7_i2c_v2_1_0.mpd line 108	Unknown PORT subproperty IIC Serial Data

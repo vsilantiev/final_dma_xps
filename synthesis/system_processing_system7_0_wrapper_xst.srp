@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vladimir/cf_ad9467_zed/synthesis/xst_temp_dir/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 
@@ -589,8 +589,8 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.02 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.74 secs
  
 --> 
 

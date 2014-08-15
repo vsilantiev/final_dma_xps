@@ -39,7 +39,9 @@ entity system_stub is
     spi_cs0n : out std_logic;
     spi_cs1n : out std_logic;
     spi_clk : out std_logic;
-    spi_sdio : inout std_logic
+    spi_sdio : inout std_logic;
+    init_dma_0_STR_LSR_pin : out std_logic;
+    init_dma_0_IRQ_4M_pin : out std_logic
   );
 end system_stub;
 
@@ -77,7 +79,9 @@ architecture STRUCTURE of system_stub is
       spi_cs0n : out std_logic;
       spi_cs1n : out std_logic;
       spi_clk : out std_logic;
-      spi_sdio : inout std_logic
+      spi_sdio : inout std_logic;
+      init_dma_0_STR_LSR_pin : out std_logic;
+      init_dma_0_IRQ_4M_pin : out std_logic
     );
   end component;
 
@@ -118,7 +122,9 @@ begin
       spi_cs0n => spi_cs0n,
       spi_cs1n => spi_cs1n,
       spi_clk => spi_clk,
-      spi_sdio => spi_sdio
+      spi_sdio => spi_sdio,
+      init_dma_0_STR_LSR_pin => init_dma_0_STR_LSR_pin,
+      init_dma_0_IRQ_4M_pin => init_dma_0_IRQ_4M_pin
     );
 
 end architecture STRUCTURE;

@@ -20,6 +20,9 @@ NET adc_data_in_n[6]  LOC = "L22" | DIFF_TERM = "TRUE" | IOSTANDARD = "LVDS_25";
 NET adc_data_in_p[7]  LOC = "T16" | DIFF_TERM = "TRUE" | IOSTANDARD = "LVDS_25";
 NET adc_data_in_n[7]  LOC = "T17" | DIFF_TERM = "TRUE" | IOSTANDARD = "LVDS_25";
 
+NET init_dma_0_STR_LSR_pin  LOC="Y11" | IOSTANDARD = "LVCMOS25";
+NET init_dma_0_IRQ_4M_pin   LOC="T22" | IOSTANDARD = "LVCMOS25";
+
 NET spi_cs0n LOC = "B22" | IOSTANDARD = "LVCMOS25";
 NET spi_cs1n LOC = "B21" | IOSTANDARD = "LVCMOS25";
 NET spi_clk  LOC = "A22" | IOSTANDARD = "LVCMOS25";
