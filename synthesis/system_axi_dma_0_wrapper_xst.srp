@@ -5,7 +5,7 @@ Parameter TMPDIR set to /home/vladimir/cf_ad9467_zed/synthesis/xst_temp_dir/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 
@@ -4434,13 +4434,13 @@ s_axi_lite_aclk|    2.650|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 170.00 secs
-Total CPU time to Xst completion: 127.60 secs
+Total REAL time to Xst completion: 164.00 secs
+Total CPU time to Xst completion: 120.49 secs
  
 --> 
 
 
-Total memory usage is 582036 kilobytes
+Total memory usage is 582040 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  511 (   0 filtered)

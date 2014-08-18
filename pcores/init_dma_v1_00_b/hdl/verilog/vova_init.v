@@ -226,7 +226,6 @@ module vova_init (
 		index_reg <= index_reg - 4;
   end
 
-  reg [31:0] count_enter;
   reg [31:0] pre_addr_buff;
   
   always @(negedge Bus2IP_Resetn or posedge Bus2IP_Clk) begin
@@ -266,7 +265,6 @@ module vova_init (
 		up_addr_buff30 <= 'd0;
 		up_addr_buff31 <= 'd0;
 		up_addr_buff32 <= 'd0;
-		count_enter <= 'd0;
     end else begin
       if ((up_addr == 5'h00) && (up_sel & ~up_rwn)) begin
         up_len_ref <= up_wdata;
@@ -312,7 +310,6 @@ module vova_init (
 	   end
 //Надо сделать один сдвиг
 	   if (rs_next_addr) begin
-	     count_enter <= count_enter + 1;
 		  in_addr_buff <= up_addr_buff1;
 		  up_addr_buff1 <= up_addr_buff2;
 		  up_addr_buff2 <= up_addr_buff3;
@@ -369,16 +366,10 @@ module vova_init (
 		  5'h08: up_rdata <= up_addr_buff3; //20
 		  5'h09: up_rdata <= up_addr_buff4; //24
 		  5'h0A: up_rdata <= up_addr_buff32; //28
-		  5'h0B: up_rdata <= count_enter; //2c
-		  5'h0C: up_rdata <= count_4m; // 30
 		  5'h0D: up_rdata <= r_next_addr; //34
 		  5'h0E: up_rdata <= irq_4m; //38
 		  5'h0F: up_rdata <= debug_count_irq; //3c
-		  5'h10: up_rdata <= count_f; //40
 		  5'h11: up_rdata <= count_irq_dma; //44
-		  5'h12: up_rdata <= count_f1; //48
-		  5'h13: up_rdata <= count_f2; //4c
-		  5'h14: up_rdata <= count_f3; //50
         default: up_rdata <= 0;
       endcase
 		up_sel_d <= up_sel;
@@ -479,41 +470,20 @@ reg [31:0] pe;
   end
   // если pe=up_per+1 (1) если pe!=up_per+1 (0)
   assign STR_LSR = (pe == (up_per+1))? 1'b1 : 1'b0;
-	
-  reg [31:0] count_4m;
-  
-  reg [31:0] count_f;
-  reg [31:0] count_f1;
-  reg [31:0] count_f2;
-  reg [31:0] count_f3;
-
+	  
   always @(posedge M_AXI_ACLK) begin                                                                            
     if (M_AXI_ARESETN == 0) begin                                                                    
 	   count_irq_dma <= 0;
-		count_4m <= 0;//Debug
-		r_next_addr <= 0;
-		count_f <= 0;
-		count_f1 <= 0;
-		count_f2 <= 0;
-		count_f3 <= 0;		
+		r_next_addr <= 0;	
     end else if (irq_dma_pulse && ((in_addr_buff + (up_len_ref*4)*count_irq_dma) <= (in_addr_buff + 32'h400000))) begin
 		count_irq_dma <= count_irq_dma + 1;
-	     if (r_next_addr == 1) 	
-		    count_f2 <= count_f2 + 1; //не разу 
 		r_next_addr <= 0;	
     end else if (in_addr_buff + ((up_len_ref*4)*(count_irq_dma+1)) > (in_addr_buff + 32'h400000)) begin//Конец 4M нужен новый вектор
-		count_4m <= count_4m+1;//Debug
 		count_irq_dma <= 0;
-		if (r_next_addr == 0)
-			count_f3 <= count_f3 + 1; // 2 раза 1./
 		r_next_addr <= 1;
 	 end else if ((in_addr_buff == 0) && ((IP2Bus_WrAck) && (up_addr == 5'h01))) /*(index_reg[0] == 0 && index_reg[1] == 0)*/ begin
 		r_next_addr <= 1;
-		  if (r_next_addr == 0)
-		    count_f <= count_f + 1; // 1 раз 3
 	 end else begin  
-		if (r_next_addr == 1)
-		   count_f1 <= count_f1 + 1; // 3 раза  3
 		r_next_addr <= 0;
 	 end
   end  
@@ -526,14 +496,14 @@ reg [31:0] pe;
   
   always @(posedge M_AXI_ACLK) begin                                                                           
     if (M_AXI_ARESETN == 0) begin                                                                    
-		pre_addr_buff <= 0;
 		debug_count_irq <= 0;
 		irq_4m <= 0;
+		pre_addr_buff <= 0;
 		//len_irq <= 0;
     end else begin
 		if ((rs_next_addr == 1) && (in_addr_buff != 0)) begin                                                                     
-		  pre_addr_buff <= in_addr_buff;
         irq_4m <= 64'hFFFFFFFFFFFFFFFF; //Надо выдать прерывание для Анатолия здесь
+		  pre_addr_buff <= in_addr_buff;
 		  //len_irq <= len_irq + 1;
 		end
 		if (/*len_irq != 0*/irq_4m != 0) begin

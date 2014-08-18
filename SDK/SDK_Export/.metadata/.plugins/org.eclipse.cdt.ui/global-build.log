@@ -2257,3 +2257,42 @@ arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
   57064	  11336	  72500	 140900	  22664	fsbl.elf
 Finished building: fsbl.elf.size
  
+13:18:47 **** Build of project device-tree_bsp_0 ****
+make -k all 
+libgen -hw ../cf_ad9467_zed_hw_platform/system.xml\
+	       -lp /home/vladimir/cf_ad9467_zed\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../cf_ad9467_zed_hw_platform/system.xml -lp
+/home/vladimir/cf_ad9467_zed -pe ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+#--------------------------------------
+# device-tree BSP DRC...
+#--------------------------------------
+Running generate.
+#--------------------------------------
+# device-tree BSP generate...
+#--------------------------------------
+--- device tree generator version: v1.1 ---
+generating xilinx.dts
+Clock Port Summary:
+ERROR:EDK:2950 - 
+   Unknown MDT DataBase Function get_wclock_frequency 
+ERROR:EDK - device-tree () -  
+ERROR:EDK:3416 - Error(s) while running TCL procedure generate().
+make: *** [ps7_cortexa9_0/lib/libxil.a] Ошибка 2
+make: Цель `all' не была пересобрана из-за ошибок.
+13:18:50 **** Build of project fsbl_bsp ****
+make -k all 
+Finished building libraries
+13:18:50 **** Build of configuration Release for project fsbl ****
+make all 
+make: Цель `all' не требует выполнения команд.

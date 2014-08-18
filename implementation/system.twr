@@ -72,7 +72,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  1847 paths analyzed, 881 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   3.638ns.
+ Minimum period is   3.522ns.
 --------------------------------------------------------------------------------
 
 
@@ -88,8 +88,8 @@ Clock to Setup on destination clock adc_clk_in_n
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-adc_clk_in_n   |    3.638|         |         |         |
-adc_clk_in_p   |    3.638|         |         |         |
+adc_clk_in_n   |    3.522|         |         |         |
+adc_clk_in_p   |    3.522|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock adc_clk_in_p
@@ -97,8 +97,8 @@ Clock to Setup on destination clock adc_clk_in_p
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-adc_clk_in_n   |    3.638|         |         |         |
-adc_clk_in_p   |    3.638|         |         |         |
+adc_clk_in_n   |    3.522|         |         |         |
+adc_clk_in_p   |    3.522|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -107,20 +107,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 2818 paths, 0 nets, and 2476 connections
+Constraints cover 2818 paths, 0 nets, and 2471 connections
 
 Design statistics:
-   Minimum period:   3.638ns   (Maximum frequency: 274.876MHz)
+   Minimum period:   3.522ns   (Maximum frequency: 283.930MHz)
 
 
-Analysis completed Fri Aug 15 12:46:40 2014 
+Analysis completed Mon Aug 18 13:11:34 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 902 MB
+Peak Memory Usage: 898 MB
 
 
 

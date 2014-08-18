@@ -1305,30 +1305,30 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 11483
+# BELS                             : 10708
 #      GND                         : 25
-#      INV                         : 456
-#      LUT1                        : 366
-#      LUT2                        : 1187
-#      LUT3                        : 2614
-#      LUT4                        : 1938
-#      LUT5                        : 1030
-#      LUT6                        : 2234
-#      MUXCY                       : 772
+#      INV                         : 447
+#      LUT1                        : 180
+#      LUT2                        : 1197
+#      LUT3                        : 2611
+#      LUT4                        : 1966
+#      LUT5                        : 962
+#      LUT6                        : 2096
+#      MUXCY                       : 586
 #      MUXCY_L                     : 30
-#      MUXF7                       : 114
+#      MUXF7                       : 83
 #      MUXF8                       : 6
 #      VCC                         : 17
-#      XORCY                       : 694
-# FlipFlops/Latches                : 12499
+#      XORCY                       : 502
+# FlipFlops/Latches                : 12307
 #      FD                          : 646
 #      FDC                         : 2275
-#      FDCE                        : 1981
+#      FDCE                        : 1949
 #      FDE                         : 4180
 #      FDP                         : 653
 #      FDPE                        : 60
-#      FDR                         : 658
-#      FDRE                        : 1985
+#      FDR                         : 530
+#      FDRE                        : 1953
 #      FDS                         : 38
 #      FDSE                        : 14
 #      IDDR_2CLK                   : 9
@@ -1361,19 +1361,19 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12491  out of  106400    11%  
- Number of Slice LUTs:                11337  out of  53200    21%  
-    Number used as Logic:              9825  out of  53200    18%  
+ Number of Slice Registers:           12299  out of  106400    11%  
+ Number of Slice LUTs:                10971  out of  53200    20%  
+    Number used as Logic:              9459  out of  53200    17%  
     Number used as Memory:             1512  out of  17400     8%  
        Number used as RAM:             1316
        Number used as SRL:              196
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  17775
-   Number with an unused Flip Flop:    5284  out of  17775    29%  
-   Number with an unused LUT:          6438  out of  17775    36%  
-   Number of fully used LUT-FF pairs:  6053  out of  17775    34%  
-   Number of unique control sets:       714
+ Number of LUT Flip Flop pairs used:  17393
+   Number with an unused Flip Flop:    5094  out of  17393    29%  
+   Number with an unused LUT:          6422  out of  17393    36%  
+   Number of fully used LUT-FF pairs:  5877  out of  17393    33%  
+   Number of unique control sets:       713
 
 IO Utilization: 
  Number of IOs:                         156
@@ -1407,7 +1407,7 @@ Clock Information:
 ----------------------------------------------------------------+-----------------------------------------------------------------+-------+
 Clock Signal                                                    | Clock buffer(FF name)                                           | Load  |
 ----------------------------------------------------------------+-----------------------------------------------------------------+-------+
-processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                                                            | 12689 |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>| BUFG                                                            | 12497 |
 adc_clk_in_p                                                    | IBUFGDS+BUFG                                                    | 255   |
 processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<1>| BUFG                                                            | 41    |
 net_gnd0                                                        | NONE(processing_system7_0/processing_system7_0/ENET1_GMII_TX_ER)| 81    |
@@ -1429,7 +1429,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 12.072ns (Maximum Frequency: 82.833MHz)
+   Minimum period: 12.065ns (Maximum Frequency: 82.884MHz)
    Minimum input arrival time before clock: 4.065ns
    Maximum output required time after clock: 3.601ns
    Maximum combinational path delay: 1.120ns
@@ -1440,45 +1440,45 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>'
-  Clock period: 12.072ns (frequency: 82.833MHz)
-  Total number of paths / destination ports: 3327505045 / 31931
+  Clock period: 12.065ns (frequency: 82.884MHz)
+  Total number of paths / destination ports: 873196212 / 31483
 -------------------------------------------------------------------------
-Delay:               12.072ns (Levels of Logic = 22)
+Delay:               12.065ns (Levels of Logic = 22)
   Source:            init_dma_0/init_dma_0/USER_LOGIC_I/up_len_ref_14 (FF)
-  Destination:       init_dma_0/init_dma_0/USER_LOGIC_I/Mmult_n05732 (DSP)
+  Destination:       init_dma_0/init_dma_0/USER_LOGIC_I/Mmult_n05192 (DSP)
   Source Clock:      processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
   Destination Clock: processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0> rising
 
-  Data Path: init_dma_0/init_dma_0/USER_LOGIC_I/up_len_ref_14 to init_dma_0/init_dma_0/USER_LOGIC_I/Mmult_n05732
+  Data Path: init_dma_0/init_dma_0/USER_LOGIC_I/up_len_ref_14 to init_dma_0/init_dma_0/USER_LOGIC_I/Mmult_n05192
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             9   0.282   0.452  init_dma_0/USER_LOGIC_I/up_len_ref_14 (init_dma_0/USER_LOGIC_I/up_len_ref<14>)
-     DSP48E1:B16->PCOUT47    1   3.851   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0573 (init_dma_0/USER_LOGIC_I/Mmult_n0573_PCOUT_to_Mmult_n05731_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n05731 (init_dma_0/USER_LOGIC_I/Mmult_n05731_PCOUT_to_Mmult_n05732_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n05732 (init_dma_0/USER_LOGIC_I/n0573<17>)
-     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_lut<17>)
-     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<26>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<27>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<28>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_cy<29>)
-     XORCY:CI->O           3   0.320   0.649  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_296_OUT_xor<30> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_296_OUT<30>)
-     LUT4:I0->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o_lut<15> (init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o_lut<15>)
-     MUXCY:S->O          100   0.291   0.580  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o_cy<15> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_in_addr_buff[31]_LessThan_226_o)
-     LUT3:I2->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/_n1035_inv1_lut (init_dma_0/USER_LOGIC_I/_n1035_inv1_lut)
-     MUXCY:S->O            2   0.454   0.405  init_dma_0/USER_LOGIC_I/_n1035_inv1_cy (init_dma_0/USER_LOGIC_I/_n1035_inv)
-     DSP48E1:CEB2              0.514          init_dma_0/USER_LOGIC_I/Mmult_n05732
+     DSP48E1:B16->PCOUT47    1   3.851   0.000  init_dma_0/USER_LOGIC_I/Mmult_n0519 (init_dma_0/USER_LOGIC_I/Mmult_n0519_PCOUT_to_Mmult_n05191_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  init_dma_0/USER_LOGIC_I/Mmult_n05191 (init_dma_0/USER_LOGIC_I/Mmult_n05191_PCOUT_to_Mmult_n05192_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.518   0.413  init_dma_0/USER_LOGIC_I/Mmult_n05192 (init_dma_0/USER_LOGIC_I/n0519<17>)
+     LUT2:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_lut<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_lut<17>)
+     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<26>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<27> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<27>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<28> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<28>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<29> (init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_cy<29>)
+     XORCY:CI->O           3   0.320   0.649  init_dma_0/USER_LOGIC_I/Madd_in_addr_buff[31]_up_len_ref[29]_add_275_OUT_xor<30> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_up_len_ref[29]_add_275_OUT<30>)
+     LUT4:I0->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_239_o_lut<15> (init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_239_o_lut<15>)
+     MUXCY:S->O           66   0.291   0.573  init_dma_0/USER_LOGIC_I/Mcompar_in_addr_buff[31]_in_addr_buff[31]_LessThan_239_o_cy<15> (init_dma_0/USER_LOGIC_I/in_addr_buff[31]_in_addr_buff[31]_LessThan_239_o)
+     LUT3:I2->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/_n0965_inv1_lut (init_dma_0/USER_LOGIC_I/_n0965_inv1_lut)
+     MUXCY:S->O            2   0.454   0.405  init_dma_0/USER_LOGIC_I/_n0965_inv1_cy (init_dma_0/USER_LOGIC_I/_n0965_inv)
+     DSP48E1:CEB2              0.514          init_dma_0/USER_LOGIC_I/Mmult_n05192
     ----------------------------------------
-    Total                     12.072ns (9.573ns logic, 2.499ns route)
+    Total                     12.065ns (9.573ns logic, 2.492ns route)
                                        (79.3% logic, 20.7% route)
 
 =========================================================================
@@ -1626,35 +1626,35 @@ Offset:              3.601ns (Levels of Logic = 34)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             5   0.282   0.426  init_dma_0/USER_LOGIC_I/up_per_0 (init_dma_0/USER_LOGIC_I/up_per<0>)
-     INV:I->O              1   0.067   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_lut<0>_INV_0 (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_lut<0>)
-     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<0> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<0>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<1> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<1>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<2> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<2>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<3> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<3>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<4> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<4>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<5> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<5>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<6> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<6>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<7> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<7>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<8> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<8>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<9> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<9>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<10> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<10>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<11> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<11>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<12> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<12>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<13> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<13>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<14> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<14>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<15> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<15>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<16> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<16>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_cy<26>)
-     XORCY:CI->O           1   0.320   0.725  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_218_OUT_xor<27> (init_dma_0/USER_LOGIC_I/up_per[31]_GND_49_o_add_218_OUT<27>)
+     INV:I->O              1   0.067   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_lut<0>_INV_0 (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<0> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<1> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<2> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<3> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<4> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<5> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<6> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<7> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<8> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<9> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<10> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<11> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<12> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<13> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<14> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<15> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<16> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<17> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<18> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<19> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<20> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<21> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<22> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<23> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<24> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<25> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<26> (init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_cy<26>)
+     XORCY:CI->O           1   0.320   0.725  init_dma_0/USER_LOGIC_I/Madd_up_per[31]_GND_49_o_add_231_OUT_xor<27> (init_dma_0/USER_LOGIC_I/up_per[31]_GND_49_o_add_231_OUT<27>)
      LUT6:I1->O            1   0.053   0.000  init_dma_0/USER_LOGIC_I/Mcompar_STR_LSR_lut<9> (init_dma_0/USER_LOGIC_I/Mcompar_STR_LSR_lut<9>)
      MUXCY:S->O            1   0.291   0.000  init_dma_0/USER_LOGIC_I/Mcompar_STR_LSR_cy<9> (init_dma_0/USER_LOGIC_I/Mcompar_STR_LSR_cy<9>)
      MUXCY:CI->O          35   0.204   0.552  init_dma_0/USER_LOGIC_I/Mcompar_STR_LSR_cy<10> (STR_LSR)
@@ -1745,7 +1745,7 @@ Clock to Setup on destination clock processing_system7_0/processing_system7_0/FC
 Source Clock                                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------+---------+---------+---------+---------+
 adc_clk_in_p                                                    |    0.850|         |         |         |
-processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|   12.072|         |         |         |
+processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<0>|   12.065|         |         |         |
 processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<1>|    0.698|         |         |         |
 ----------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -1761,13 +1761,13 @@ processing_system7_0/processing_system7_0/FCLK_CLK_unbuffered<1>|    1.936|     
 =========================================================================
 
 
-Total REAL time to Xst completion: 34.00 secs
-Total CPU time to Xst completion: 34.23 secs
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 33.31 secs
  
 --> 
 
 
-Total memory usage is 578176 kilobytes
+Total memory usage is 576600 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   11 (   0 filtered)
